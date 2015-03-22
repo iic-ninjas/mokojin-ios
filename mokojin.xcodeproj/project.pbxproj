@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA961ABF1BEE00F52413 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA951ABF1BEE00F52413 /* ViewController.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
+		B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F4481F584FA89BCB664E147 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */,
+				609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B8FFFCD42F3342AD0BA15B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED1CDA851ABF1BEE00F52413 = {
 			isa = PBXGroup;
 			children = (
 				ED1CDA901ABF1BEE00F52413 /* mokojin */,
 				ED1CDAA61ABF1BEE00F52413 /* mokojinTests */,
 				ED1CDA8F1ABF1BEE00F52413 /* Products */,
+				3F4481F584FA89BCB664E147 /* Pods */,
+				6B8FFFCD42F3342AD0BA15B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED1CDAAD1ABF1BEE00F52413 /* Build configuration list for PBXNativeTarget "mokojin" */;
 			buildPhases = (
+				158A319567A15DBE42C73EE2 /* Check Pods Manifest.lock */,
 				ED1CDA8A1ABF1BEE00F52413 /* Sources */,
 				ED1CDA8B1ABF1BEE00F52413 /* Frameworks */,
 				ED1CDA8C1ABF1BEE00F52413 /* Resources */,
+				9488AC40B15DEAE68FF46044 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +232,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		158A319567A15DBE42C73EE2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9488AC40B15DEAE68FF46044 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mokojin/Pods-mokojin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED1CDA8A1ABF1BEE00F52413 /* Sources */ = {
@@ -336,9 +395,11 @@
 		};
 		ED1CDAAE1ABF1BEE00F52413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mokojin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,9 +407,11 @@
 		};
 		ED1CDAAF1ABF1BEE00F52413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mokojin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -407,6 +470,7 @@
 				ED1CDAAF1ABF1BEE00F52413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED1CDAB01ABF1BEE00F52413 /* Build configuration list for PBXNativeTarget "mokojinTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +479,7 @@
 				ED1CDAB21ABF1BEE00F52413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
