@@ -21,7 +21,7 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
     }
     
     override func getNotificationName() -> String {
-        return CharacterStore.sharedInstance.NOTIFICATION_NAME
+        return CharacterStoreNotificationName
     }
     
     override func updateData() {

@@ -11,13 +11,13 @@ import Parse
 
 private let _SessionDataStoreInstance = SessionDataStore()
 
+let SessionDataStoreNotificationName = "SessionDataStoreUpdated"
 class SessionDataStore {
     
     class var sharedInstance: SessionDataStore {
         return _SessionDataStoreInstance
     }
-    let NOTIFICATION_NAME = "SessionDataStoreUpdated"
-    
+
     let getter = GetSessionData()
 
     var match:Match? = nil
@@ -35,10 +35,8 @@ class SessionDataStore {
             if let sessionData = $0 {
                 self.match = sessionData.match
                 self.queue = sessionData.queue
-                NSNotificationCenter.defaultCenter().postNotificationName(self.NOTIFICATION_NAME, object: nil)
-            } else {
-                NSNotificationCenter.defaultCenter().postNotificationName(self.NOTIFICATION_NAME, object: nil)
             }
+            NSNotificationCenter.defaultCenter().postNotificationName(SessionDataStoreNotificationName, object: nil)
         }
         
     }

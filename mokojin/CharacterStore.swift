@@ -11,13 +11,13 @@ import Parse
 
 private let _CharacterStoreInstance = CharacterStore()
 
+let CharacterStoreNotificationName = "CharacterStoreUpdated"
 class CharacterStore {
     
     class var sharedInstance: CharacterStore {
         return _CharacterStoreInstance
     }
-    let NOTIFICATION_NAME = "CharacterStoreUpdated"
-    
+
     let getter = GetCharacters()
     var characters:[Character] = []
     var loaded = false
@@ -31,7 +31,7 @@ class CharacterStore {
         getter.get {
             self.loaded = true
             self.characters = $0
-            NSNotificationCenter.defaultCenter().postNotificationName(self.NOTIFICATION_NAME,
+            NSNotificationCenter.defaultCenter().postNotificationName(CharacterStoreNotificationName,
                 object: self.characters)
         }
         
