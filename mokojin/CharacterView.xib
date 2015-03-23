@@ -22,7 +22,7 @@
                         <constraint firstAttribute="width" constant="94" id="T1Y-c9-MzQ"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Character Name" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-FE-Jyb">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Character Name" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-FE-Jyb">
                     <rect key="frame" x="0.0" y="101" width="600" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="iIg-B7-EFq"/>
