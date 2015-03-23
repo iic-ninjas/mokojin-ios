@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AvatarView: UIImageView {
+@IBDesignable class AvatarView: UIImageView {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()

@@ -9,16 +9,18 @@
 import Foundation
 import UIKit
 
-class CharacterView: UIView {
+@IBDesignable class CharacterView: UIView {
     var character:Character = Character() {
         didSet {
             setup()
         }
     }
     
-    var avatarView: AvatarView?
-    var nameView: UITextView?
+    @IBOutlet weak var avatarView: AvatarView!
+    @IBOutlet weak var nameView: UITextView!
     
+    private var loadedXib: Bool = false
+
     init(character: Character) {
         super.init()
         self.character = character
@@ -29,15 +31,20 @@ class CharacterView: UIView {
         super.init(coder: aDecoder)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     private func setup() {
-        if self.nameView != nil { self.nameView!.removeFromSuperview() }
-        if self.avatarView != nil { self.avatarView!.removeFromSuperview() }
+        if !self.loadedXib {
+            let view = NSBundle.mainBundle().loadNibNamed("CharacterView", owner: self, options: nil)[0] as UIView
+            view.frame = self.bounds
+            self.addSubview(view)
+            self.loadedXib = true
+        }
         
-        self.nameView = UITextView()
-        self.nameView?.text = self.character.name
-        self.addSubview(self.nameView!)
-        
-        self.avatarView = AvatarView(image: UIImage(named: "player_\(self.character.characterId)"))
-        self.addSubview(self.avatarView!)
+        self.nameView.text = self.character.name
+        self.nameView.textAlignment = .Center
+        self.avatarView.image = UIImage(named: "player_\(self.character.characterId)")
     }
 }

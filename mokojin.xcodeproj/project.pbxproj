@@ -10,6 +10,9 @@
 		CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D861AC01AD800BC5138 /* AvatarView.swift */; };
 		CA413D891AC036A600BC5138 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D881AC036A600BC5138 /* CharacterView.swift */; };
 		CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */; };
+		CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */; };
+		CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */; };
+		CA413D921AC04DAE00BC5138 /* CharacterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA413D911AC04DAE00BC5138 /* CharacterView.xib */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		CA413D861AC01AD800BC5138 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		CA413D881AC036A600BC5138 /* CharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListenerViewController.swift; sourceTree = "<group>"; };
+		CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCharactersViewController.swift; sourceTree = "<group>"; };
+		CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
+		CA413D911AC04DAE00BC5138 /* CharacterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterView.xib; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,13 +128,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CA413D851AC01ABC00BC5138 /* view */ = {
+		CA413D851AC01ABC00BC5138 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				CA413D901AC04D8C00BC5138 /* CharacterView */,
 				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
-				CA413D881AC036A600BC5138 /* CharacterView.swift */,
+				CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */,
 			);
-			name = view;
+			name = views;
+			sourceTree = "<group>";
+		};
+		CA413D901AC04D8C00BC5138 /* CharacterView */ = {
+			isa = PBXGroup;
+			children = (
+				CA413D881AC036A600BC5138 /* CharacterView.swift */,
+				CA413D911AC04DAE00BC5138 /* CharacterView.xib */,
+			);
+			name = CharacterView;
 			sourceTree = "<group>";
 		};
 		ED1CDA851ABF1BEE00F52413 = {
@@ -154,7 +170,7 @@
 		ED1CDA901ABF1BEE00F52413 /* mokojin */ = {
 			isa = PBXGroup;
 			children = (
-				CA413D851AC01ABC00BC5138 /* view */,
+				CA413D851AC01ABC00BC5138 /* views */,
 				ED605C901AC0054C00243FC1 /* controllers */,
 				ED605C8C1ABFFF2E00243FC1 /* cloud */,
 				EDD2A2D31ABF310D00B2AC91 /* datastores */,
@@ -218,6 +234,7 @@
 			children = (
 				ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */,
 				CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */,
+				CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -350,6 +367,7 @@
 			files = (
 				ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */,
 				ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */,
+				CA413D921AC04DAE00BC5138 /* CharacterView.xib in Resources */,
 				ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +424,7 @@
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
+				CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */,
 				ED605CAC1AC0174B00243FC1 /* GoodNightOperaiton.swift in Sources */,
 				CA413D891AC036A600BC5138 /* CharacterView.swift in Sources */,
 				CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */,
@@ -422,6 +441,7 @@
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
+				CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */,
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
 				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,
 				ED605C991AC00E5D00243FC1 /* Character.swift in Sources */,
