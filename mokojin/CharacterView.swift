@@ -34,7 +34,7 @@ class CharacterView: UIView {
         if self.avatarView != nil { self.avatarView!.removeFromSuperview() }
         
         self.nameView = UITextView()
-        self.nameView!.text = self.character.name
+        self.nameView?.text = self.character.name
         self.addSubview(self.nameView!)
         
         self.avatarView = AvatarView(image: UIImage(named: "player_\(self.character.characterId)"))
