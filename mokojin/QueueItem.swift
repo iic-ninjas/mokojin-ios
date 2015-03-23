@@ -9,6 +9,8 @@
 import Foundation
 import Parse
 
+typealias Queue = [QueueItem]
+
 class QueueItem : PFObject, PFSubclassing {
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
