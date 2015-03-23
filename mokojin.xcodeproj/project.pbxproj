@@ -20,6 +20,8 @@
 		ED605C991AC00E5D00243FC1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C981AC00E5D00243FC1 /* Character.swift */; };
 		ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9A1AC00ED200243FC1 /* QueueItem.swift */; };
 		ED605C9D1AC00EF000243FC1 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9C1AC00EF000243FC1 /* Match.swift */; };
+		ED605C9F1AC010E400243FC1 /* GetCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9E1AC010E400243FC1 /* GetCharacters.swift */; };
+		ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CA01AC0114E00243FC1 /* CharacterStore.swift */; };
 		EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D11ABF305C00B2AC91 /* Person.swift */; };
 		EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		ED605C981AC00E5D00243FC1 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		ED605C9A1AC00ED200243FC1 /* QueueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItem.swift; sourceTree = "<group>"; };
 		ED605C9C1AC00EF000243FC1 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		ED605C9E1AC010E400243FC1 /* GetCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharacters.swift; sourceTree = "<group>"; };
+		ED605CA01AC0114E00243FC1 /* CharacterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterStore.swift; sourceTree = "<group>"; };
 		EDD2A2D11ABF305C00B2AC91 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */,
+				ED605C9E1AC010E400243FC1 /* GetCharacters.swift */,
 			);
 			name = getters;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */,
+				ED605CA01AC0114E00243FC1 /* CharacterStore.swift */,
 			);
 			name = datastores;
 			sourceTree = "<group>";
@@ -344,7 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
+				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
+				ED605C9F1AC010E400243FC1 /* GetCharacters.swift in Sources */,
 				EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */,
 				ED605C9D1AC00EF000243FC1 /* Match.swift in Sources */,
 				ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */,

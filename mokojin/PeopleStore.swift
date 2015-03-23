@@ -18,7 +18,7 @@ class PeopleStore {
     }
     let NOTIFICATION_NAME = "PeopleStoreUpdated"
     
-    let getter:GetPeople = GetPeople()
+    let getter = GetPeople()
     var people:People = []
     var loaded = false
     
