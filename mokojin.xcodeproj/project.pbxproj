@@ -16,6 +16,10 @@
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
 		ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
+		ED605C971AC00C1300243FC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C961AC00C1300243FC1 /* Player.swift */; };
+		ED605C991AC00E5D00243FC1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C981AC00E5D00243FC1 /* Character.swift */; };
+		ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9A1AC00ED200243FC1 /* QueueItem.swift */; };
+		ED605C9D1AC00EF000243FC1 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9C1AC00EF000243FC1 /* Match.swift */; };
 		EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D11ABF305C00B2AC91 /* Person.swift */; };
 		EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +50,10 @@
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
 		ED605C941AC00A7500243FC1 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		ED605C961AC00C1300243FC1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		ED605C981AC00E5D00243FC1 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		ED605C9A1AC00ED200243FC1 /* QueueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItem.swift; sourceTree = "<group>"; };
+		ED605C9C1AC00EF000243FC1 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		EDD2A2D11ABF305C00B2AC91 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				EDD2A2D11ABF305C00B2AC91 /* Person.swift */,
+				ED605C961AC00C1300243FC1 /* Player.swift */,
+				ED605C981AC00E5D00243FC1 /* Character.swift */,
+				ED605C9A1AC00ED200243FC1 /* QueueItem.swift */,
+				ED605C9C1AC00EF000243FC1 /* Match.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -334,9 +346,13 @@
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
 				EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */,
+				ED605C9D1AC00EF000243FC1 /* Match.swift in Sources */,
 				ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */,
+				ED605C971AC00C1300243FC1 /* Player.swift in Sources */,
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
+				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,
+				ED605C991AC00E5D00243FC1 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
