@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D861AC01AD800BC5138 /* AvatarView.swift */; };
+		CA413D891AC036A600BC5138 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D881AC036A600BC5138 /* CharacterView.swift */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
 		B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.debug.xcconfig"; sourceTree = "<group>"; };
+		CA413D861AC01AD800BC5138 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		CA413D881AC036A600BC5138 /* CharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA413D851AC01ABC00BC5138 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
+				CA413D881AC036A600BC5138 /* CharacterView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		ED1CDA851ABF1BEE00F52413 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +152,7 @@
 		ED1CDA901ABF1BEE00F52413 /* mokojin */ = {
 			isa = PBXGroup;
 			children = (
+				CA413D851AC01ABC00BC5138 /* view */,
 				ED605C901AC0054C00243FC1 /* controllers */,
 				ED605C8C1ABFFF2E00243FC1 /* cloud */,
 				EDD2A2D31ABF310D00B2AC91 /* datastores */,
@@ -390,6 +404,7 @@
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
 				ED605CAC1AC0174B00243FC1 /* GoodNightOperaiton.swift in Sources */,
+				CA413D891AC036A600BC5138 /* CharacterView.swift in Sources */,
 				ED605C9F1AC010E400243FC1 /* GetCharacters.swift in Sources */,
 				ED605CB21AC0183000243FC1 /* LeaveQueueOperation.swift in Sources */,
 				ED605CB41AC0186C00243FC1 /* SetCharactersOperation.swift in Sources */,
@@ -399,6 +414,7 @@
 				ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */,
 				ED605CB01AC017F100243FC1 /* JoinQueueOperation.swift in Sources */,
 				ED605C971AC00C1300243FC1 /* Player.swift in Sources */,
+				CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */,
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
