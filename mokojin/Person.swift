@@ -9,6 +9,8 @@
 import Foundation
 import Parse
 
+typealias People = [Person]
+
 class Person : PFObject, PFSubclassing {
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;

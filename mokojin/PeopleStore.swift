@@ -9,18 +9,32 @@
 import Foundation
 import Parse
 
+private let _PeopleStoreInstance = PeopleStore()
+
 class PeopleStore {
-    func get(){
-        PFCloud.callFunctionInBackground("getPeople", withParameters: nil) { (rawResponse, err) -> Void in
-//            if let peopleRaw = rawResponse as? [AnyObject] {
-//                let people = peopleRaw.map {
-//                    let parseObject = $0 as PFObject
-//                    return parseObject
-//                }
-//                println("Hey \(people)")
-//            }
-            
+    
+    class var sharedInstance: PeopleStore {
+        return _PeopleStoreInstance
+    }
+    let NOTIFICATION_NAME = "PeopleStoreUpdated"
+    
+    let getter:GetPeople = GetPeople()
+    var people:People = []
+    var loaded = false
+    
+    private init(){
+        query()
+    }
+    
+    private func query(){
+        loaded = false
+        getter.get {
+            self.loaded = true
+            self.people = $0
+            NSNotificationCenter.defaultCenter().postNotificationName(self.NOTIFICATION_NAME,
+                object: self.people)
         }
+    
     }
     
 }
