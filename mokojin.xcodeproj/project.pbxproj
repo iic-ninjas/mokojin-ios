@@ -14,6 +14,8 @@
 		ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */; };
 		ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */; };
 		ED1CDAAA1ABF1BEE00F52413 /* mokojinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */; };
+		EDD2A2D21ABF305C00B2AC91 /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D11ABF305C00B2AC91 /* person.swift */; };
+		EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		ED1CDAA31ABF1BEE00F52413 /* mokojinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mokojinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDAA81ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mokojinTests.swift; sourceTree = "<group>"; };
+		EDD2A2D11ABF305C00B2AC91 /* person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = person.swift; sourceTree = "<group>"; };
+		EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		ED1CDA901ABF1BEE00F52413 /* mokojin */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2A2D31ABF310D00B2AC91 /* datastores */,
+				EDD2A2D01ABF304E00B2AC91 /* models */,
 				ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */,
 				ED1CDA951ABF1BEE00F52413 /* ViewController.swift */,
 				ED1CDA971ABF1BEE00F52413 /* Main.storyboard */,
@@ -134,6 +140,22 @@
 				ED1CDAA81ABF1BEE00F52413 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDD2A2D01ABF304E00B2AC91 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A2D11ABF305C00B2AC91 /* person.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		EDD2A2D31ABF310D00B2AC91 /* datastores */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */,
+			);
+			name = datastores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1CDA961ABF1BEE00F52413 /* ViewController.swift in Sources */,
+				EDD2A2D21ABF305C00B2AC91 /* person.swift in Sources */,
+				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
