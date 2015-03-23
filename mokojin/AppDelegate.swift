@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("GeJyJhvvsIe540zKyn9rCZwSv7AIEcc11DHQjSAV", clientKey: "40quo2Icf83unfXkDu2ZJjEcecPsHl03aqiuNsbH")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(nil, block: nil)
         initModels()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         return true
     }
     

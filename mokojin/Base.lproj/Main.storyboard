@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LKw-p1-peJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -13,11 +14,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.91683745384216309" green="0.25824812054634094" blue="0.17720967531204224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99993699789047241" green="1" blue="0.99987250566482544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="LIx-MO-EhP" kind="relationship" relationship="rootViewController" id="6qf-kl-JpW"/>
+                        <segue destination="igK-bJ-bW2" kind="relationship" relationship="rootViewController" id="Ouq-Yc-UcA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbp-Ms-gAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -107,6 +108,60 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="717" y="374"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kFI-BF-UfX">
+            <objects>
+                <viewController id="igK-bJ-bW2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZd-fi-p8f"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlK-jJ-vIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RVf-4c-ZTG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="imr-67-E8d">
+                                <rect key="frame" x="0.0" y="264" width="600" height="336"/>
+                                <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-W4-Mdg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.15472450852394104" green="0.19616436958312988" blue="0.22120565176010132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RaG-Fc-mdh"/>
+                                    <constraint firstAttribute="width" secondItem="Fvd-W4-Mdg" secondAttribute="height" multiplier="3:1" id="gmg-fi-c1i"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gmg-fi-c1i"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fvd-W4-Mdg" secondAttribute="trailing" id="Kd8-6t-Pkf"/>
+                            <constraint firstItem="XlK-jJ-vIk" firstAttribute="top" secondItem="imr-67-E8d" secondAttribute="bottom" id="NIe-HQ-wDY"/>
+                            <constraint firstAttribute="trailing" secondItem="imr-67-E8d" secondAttribute="trailing" id="VHJ-Z8-Wen"/>
+                            <constraint firstItem="Fvd-W4-Mdg" firstAttribute="top" secondItem="rZd-fi-p8f" secondAttribute="bottom" id="c9I-JK-o5e"/>
+                            <constraint firstItem="imr-67-E8d" firstAttribute="top" secondItem="Fvd-W4-Mdg" secondAttribute="bottom" id="fCz-sm-wAj"/>
+                            <constraint firstItem="imr-67-E8d" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="qlw-Ef-aBr"/>
+                            <constraint firstItem="Fvd-W4-Mdg" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="s1M-P3-v9t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ia8-iB-TwJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qlY-Lg-ttC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="LIx-MO-EhP" kind="show" id="u91-SE-UG1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1Y-rL-7AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="1350"/>
         </scene>
     </scenes>
 </document>
