@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class JoinQueueViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
+class JoinQueueViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate {
     
     @IBOutlet var tableView: UITableView!
     var people:People = []
+    var searchResults:People = []
     let notificationManager = NotificationManager()
     
     override init() {
@@ -26,7 +27,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     private func listenOnEvents(){
-        notificationManager.registerObserver(PeopleStore.sharedInstance.NOTIFICATION_NAME, block: { notification in
+        notificationManager.registerObserver(PeopleStoreNotificationName, block: { notification in
             self.updateData()
         })
     }
@@ -55,16 +56,37 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        if inSearchResults(tableView){
+            return searchResults.count
+        } else {
+            return people.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PlayerCellID", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = people[indexPath.row].name
-        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID", forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
         return cell
     }
 
+    func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
+        if inSearchResults(tableView){
+            return searchResults[indexPath.row]
+        } else {
+            return people[indexPath.row]
+        }
+    }
+
+    func inSearchResults(tableView: UITableView) -> Bool{
+        return tableView == searchDisplayController?.searchResultsTableView
+    }
+
+
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
+        self.searchResults = self.people.filter {
+            $0.name.hasPrefix(searchString)
+        }
+        return true
+    }
 
 }

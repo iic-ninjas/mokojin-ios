@@ -11,13 +11,13 @@ import Parse
 
 private let _PeopleStoreInstance = PeopleStore()
 
+let PeopleStoreNotificationName = "PeopleStoreUpdated"
 class PeopleStore {
     
     class var sharedInstance: PeopleStore {
         return _PeopleStoreInstance
     }
-    let NOTIFICATION_NAME = "PeopleStoreUpdated"
-    
+
     let getter = GetPeople()
     var people:People = []
     var loaded = false
@@ -31,7 +31,7 @@ class PeopleStore {
         getter.get {
             self.loaded = true
             self.people = $0
-            NSNotificationCenter.defaultCenter().postNotificationName(self.NOTIFICATION_NAME,
+            NSNotificationCenter.defaultCenter().postNotificationName(PeopleStoreNotificationName,
                 object: self.people)
         }
     
