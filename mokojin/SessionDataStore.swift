@@ -41,4 +41,14 @@ class SessionDataStore {
         
     }
     
+    func currentPlayingPeople() -> People {
+        var people:People = queue.map { (queueItem:QueueItem) in
+            queueItem.player.person
+        }
+        if let currentMatch = self.match {
+            people.append(currentMatch.playerA.person)
+            people.append(currentMatch.playerB.person)
+        }
+        return people
+    }
 }

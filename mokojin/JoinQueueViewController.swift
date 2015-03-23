@@ -31,6 +31,9 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         notificationManager.registerObserver(PeopleStoreNotificationName, block: { notification in
             self.updateData()
         })
+        notificationManager.registerObserver(SessionDataStoreNotificationName, block: { notification in
+            self.updateData()
+        })
     }
     
     deinit {
@@ -47,7 +50,11 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     
     
     private func updateData(){
-        self.people = PeopleStore.sharedInstance.people
+        let allPeople = PeopleStore.sharedInstance.update().people
+        let playingPeople = SessionDataStore.sharedInstance.currentPlayingPeople()
+        self.people = allPeople.filter {
+            !contains(playingPeople, $0)
+        }
         tableView.reloadData()
     }
     
@@ -100,11 +107,28 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     }
 
     private func addNewPerson(){
-
+        ProgressHUD.show("Creating new user")
+        let name = self.searchQuery
+        CreatePersonOperation().run(name, callback: { (raw, err) -> Void in
+            if let person = raw as? Person {
+                self.addExistingPerson(person)
+            } else {
+                ProgressHUD.dismiss()
+            }
+        })
     }
 
     private func addExistingPerson(person:Person){
+        ProgressHUD.show("Adding to Queue")
+        JoinQueueOperation().run(person, callback: { (result, err) -> Void in
+            ProgressHUD.dismiss()
+            self.done()
+        })
 
+    }
+    
+    private func done(){
+        
     }
 
     private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
