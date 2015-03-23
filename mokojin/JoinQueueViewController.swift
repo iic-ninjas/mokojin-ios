@@ -14,6 +14,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     @IBOutlet var tableView: UITableView!
     var people:People = []
     var searchResults:People = []
+    var searchQuery:String = ""
     let notificationManager = NotificationManager()
     
     override init() {
@@ -52,24 +53,61 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if inSearchResults(tableView){
-            return searchResults.count
-        } else {
-            return people.count
+        switch section {
+        case 0:
+            return inSearchResults(tableView) && searchQueryIsNewPlayer() ? 1 : 0
+        case 1 :
+            if inSearchResults(tableView){
+                return searchResults.count
+            } else {
+                return people.count
+            }
+        default:
+            assertionFailure("Table only supports up to 2 sections")
+            return 0
         }
     }
-    
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.section {
+            case 0: addNewPerson()
+            case 1: addExistingPerson(personAtIndex(tableView, indexPath: indexPath))
+            default: assertionFailure("Table only supports up to 2 sections")
+        }
+    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID") as UITableViewCell
+        switch indexPath.section {
+            case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
+            case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
+            default: assertionFailure("Table only supports up to 2 sections")
+        }
+
         return cell
     }
 
-    func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
+        self.searchQuery = searchString
+        self.searchResults = self.people.filter {
+            $0.name.lowercaseString.hasPrefix(searchString.lowercaseString)
+        }
+        return true
+    }
+
+    private func addNewPerson(){
+
+    }
+
+    private func addExistingPerson(person:Person){
+
+    }
+
+    private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
         if inSearchResults(tableView){
             return searchResults[indexPath.row]
         } else {
@@ -77,16 +115,16 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         }
     }
 
-    func inSearchResults(tableView: UITableView) -> Bool{
+    private func inSearchResults(tableView: UITableView) -> Bool{
         return tableView == searchDisplayController?.searchResultsTableView
     }
 
-
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
-        self.searchResults = self.people.filter {
-            $0.name.hasPrefix(searchString)
+    private func searchQueryIsNewPlayer() -> Bool{
+        if searchQuery.isEmpty {
+            return false
+        } else {
+            return self.people.filter{ $0.name.lowercaseString == self.searchQuery.lowercaseString }.isEmpty
         }
-        return true
     }
 
 }
