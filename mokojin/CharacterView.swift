@@ -20,17 +20,17 @@ import UIKit
         didSet {
             self.avatarView.isSelected = self.isSelected
             if self.isSelected {
-                self.nameView.textColor = UIColor.whiteColor()
-                self.nameView.backgroundColor = UIColor.redColor()
+                self.nameView.textColor = Constants.sharedInstance.colors.lightTextColor
+                self.nameView.backgroundColor = Constants.sharedInstance.colors.primaryColor
             } else {
-                self.nameView.textColor = UIColor.blackColor()
+                self.nameView.textColor = Constants.sharedInstance.colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
             }
         }
     }
     
     @IBOutlet weak var avatarView: AvatarView!
-    @IBOutlet weak var nameView: UITextView!
+    @IBOutlet weak var nameView: UILabel!
     
     private var loadedXib: Bool = false
 
@@ -57,7 +57,6 @@ import UIKit
         }
         
         self.nameView.text = self.character.name
-        self.nameView.textAlignment = .Center
         self.avatarView.image = UIImage(named: "player_\(self.character.characterId)")
     }
 }

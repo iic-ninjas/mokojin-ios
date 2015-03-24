@@ -13,6 +13,7 @@
 		CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */; };
 		CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */; };
 		CA413D921AC04DAE00BC5138 /* CharacterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA413D911AC04DAE00BC5138 /* CharacterView.xib */; };
+		CA4832761AC180AE00862CC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832751AC180AE00862CC3 /* Constants.swift */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCharactersViewController.swift; sourceTree = "<group>"; };
 		CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
 		CA413D911AC04DAE00BC5138 /* CharacterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterView.xib; sourceTree = "<group>"; };
+		CA4832751AC180AE00862CC3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				ED605C941AC00A7500243FC1 /* NotificationManager.swift */,
+				CA4832751AC180AE00862CC3 /* Constants.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
 				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,
 				ED605C991AC00E5D00243FC1 /* Character.swift in Sources */,
+				CA4832761AC180AE00862CC3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

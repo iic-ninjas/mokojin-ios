@@ -15,7 +15,7 @@ class AvatarView: UIImageView {
         didSet {
             if self.isSelected {
                 self.layer.borderWidth = 5
-                self.layer.borderColor = UIColor.redColor().CGColor
+                self.layer.borderColor = Constants.sharedInstance.colors.primaryColor.CGColor
             } else {
                 self.layer.borderWidth = 0
             }
