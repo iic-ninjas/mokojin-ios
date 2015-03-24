@@ -74,9 +74,9 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
         if self.firstSelection == nil {
             self.firstSelection = newSelection
         } else {
-            if self.secondSelection != nil {
-                self.collectionView.deselectItemAtIndexPath(self.secondSelection!.indexPath, animated: true)
-                (self.collectionView.cellForItemAtIndexPath(self.secondSelection!.indexPath) as CharacterCellView).isSelected = false
+            if let selection = self.secondSelection {
+                self.collectionView.deselectItemAtIndexPath(selection.indexPath, animated: true)
+                (self.collectionView.cellForItemAtIndexPath(selection.indexPath) as? CharacterCellView)?.isSelected = false
             }
             self.secondSelection = self.firstSelection
             self.firstSelection = newSelection
