@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+@IBDesignable
 class AvatarView: UIImageView {
     
+    @IBInspectable
     var isSelected:Bool = false {
         didSet {
             if self.isSelected {

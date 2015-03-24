@@ -12,15 +12,31 @@ class CurrentMatchViewController : UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let queueTableDelegate = QueueTableDelegate()
+    var queueTableDelegate:QueueTableDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let image = UIImage(named: "AppLogo")
         self.navigationItem.titleView = UIImageView(image: image)
-        
-        self.tableView.delegate = queueTableDelegate
-        self.tableView.dataSource = queueTableDelegate
+        self.queueTableDelegate = QueueTableDelegate(tableView: self.tableView)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if segue.identifier == "chooseCharacterSegue" {
+            if let vc = segue.destinationViewController as? SelectCharactersViewController {
+                if let queueItemCell = sender as? QueueItemCell {
+                    vc.player = queueItemCell.queueItem?.player
+                }
+            }
+        }
+    }
+    
+    @IBAction func unwindToCurrentMatch(segue: UIStoryboardSegue) {
+        queueTableDelegate?.forceUpdate()
+    }
+    
+    
+
     
 }

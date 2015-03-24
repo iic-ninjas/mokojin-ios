@@ -24,6 +24,8 @@
 		ED1CDAAA1ABF1BEE00F52413 /* mokojinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */; };
 		ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED338B841AC056720095FF7E /* ProgressHUD.swift */; };
 		ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773441AC1867000216F2B /* QueueTableDelegate.swift */; };
+		ED3773471AC19A2500216F2B /* QueueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773461AC19A2500216F2B /* QueueItemCell.swift */; };
+		ED3773491AC1A1AE00216F2B /* QueuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */; };
 		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
@@ -81,6 +83,8 @@
 		ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mokojinTests.swift; sourceTree = "<group>"; };
 		ED338B841AC056720095FF7E /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		ED3773441AC1867000216F2B /* QueueTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTableDelegate.swift; sourceTree = "<group>"; };
+		ED3773461AC19A2500216F2B /* QueueItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItemCell.swift; sourceTree = "<group>"; };
+		ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuePresenter.swift; sourceTree = "<group>"; };
 		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				CA413D901AC04D8C00BC5138 /* NamedCharacterView */,
 				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
 				CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */,
+				ED3773461AC19A2500216F2B /* QueueItemCell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4832781AC1914700862CC3 /* CharacterPresenter.swift */,
+				ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */,
 			);
 			name = presenters;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 			files = (
 				ED605CA31AC0120700243FC1 /* GetSessionData.swift in Sources */,
 				ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */,
+				ED3773471AC19A2500216F2B /* QueueItemCell.swift in Sources */,
 				ED605CAE1AC0178400243FC1 /* InvitePlayersOperation.swift in Sources */,
 				ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */,
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
@@ -460,6 +467,7 @@
 				CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */,
 				ED605C9F1AC010E400243FC1 /* GetCharacters.swift in Sources */,
 				ED605CB21AC0183000243FC1 /* LeaveQueueOperation.swift in Sources */,
+				ED3773491AC1A1AE00216F2B /* QueuePresenter.swift in Sources */,
 				ED605CB41AC0186C00243FC1 /* SetCharactersOperation.swift in Sources */,
 				EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */,
 				ED605C9D1AC00EF000243FC1 /* Match.swift in Sources */,

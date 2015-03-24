@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbp-Ms-gAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="381"/>
+            <point key="canvasLocation" x="-430" y="343"/>
         </scene>
         <!--Join Queue-->
         <scene sceneID="emW-T9-tnG">
@@ -95,9 +95,11 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="o3Z-xg-Y4l" id="cvL-Tl-Lxm"/>
                         <outlet property="tableView" destination="37i-wx-YU3" id="2v1-7i-DMB"/>
+                        <segue destination="ZW7-O3-gUp" kind="unwind" identifier="unwindToCurrentMatch" unwindAction="unwindToCurrentMatch:" id="MGh-BY-V2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZ1-2p-Qa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZW7-O3-gUp" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="o3Z-xg-Y4l">
                     <connections>
                         <outlet property="delegate" destination="LIx-MO-EhP" id="Uc6-Zv-4uO"/>
@@ -108,23 +110,23 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="717" y="374"/>
+            <point key="canvasLocation" x="1121" y="-9"/>
         </scene>
-        <!--Select Characters View Controller-->
+        <!--Choose Character-->
         <scene sceneID="X4h-9u-xzF">
             <objects>
-                <viewController id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LkG-Kh-PT7"/>
                         <viewControllerLayoutGuide type="bottom" id="Ln9-Vk-s8n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="shh-re-62S">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="39H-b6-f2b">
                                 <rect key="frame" x="8" y="64" width="584" height="536"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="deu-Tk-stR">
                                     <size key="itemSize" width="110" height="133"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -158,35 +160,50 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="39H-b6-f2b" firstAttribute="top" secondItem="LkG-Kh-PT7" secondAttribute="bottom" id="C7N-9v-Mku"/>
                             <constraint firstItem="39H-b6-f2b" firstAttribute="leading" secondItem="shh-re-62S" secondAttribute="leadingMargin" id="MEA-RB-j89"/>
+                            <constraint firstItem="39H-b6-f2b" firstAttribute="top" secondItem="LkG-Kh-PT7" secondAttribute="bottom" id="cNR-b4-esV"/>
                             <constraint firstAttribute="trailing" secondItem="39H-b6-f2b" secondAttribute="trailing" constant="8" id="cpl-qm-yiy"/>
                             <constraint firstItem="39H-b6-f2b" firstAttribute="leading" secondItem="shh-re-62S" secondAttribute="leading" constant="8" id="gmd-zf-GzR"/>
                             <constraint firstItem="39H-b6-f2b" firstAttribute="top" secondItem="LkG-Kh-PT7" secondAttribute="bottom" id="gsD-wI-AmM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="39H-b6-f2b" secondAttribute="trailing" id="jAt-wQ-SKA"/>
+                            <constraint firstItem="Ln9-Vk-s8n" firstAttribute="top" secondItem="39H-b6-f2b" secondAttribute="bottom" id="lC5-1X-uku"/>
                             <constraint firstAttribute="bottomMargin" secondItem="39H-b6-f2b" secondAttribute="bottom" id="rTF-jg-7i4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="MEA-RB-j89"/>
+                                <exclude reference="cNR-b4-esV"/>
+                                <exclude reference="gsD-wI-AmM"/>
                                 <exclude reference="jAt-wQ-SKA"/>
+                                <exclude reference="rTF-jg-7i4"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="6oV-ZR-xMk"/>
+                    <navigationItem key="navigationItem" title="Choose Character" id="6oV-ZR-xMk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6yJ-Xy-c5G">
+                            <connections>
+                                <action selector="donePressed:" destination="y4c-Mn-RW0" id="waW-n4-wAJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="39H-b6-f2b" id="GI1-8b-ERg"/>
+                        <outlet property="doneButton" destination="6yJ-Xy-c5G" id="Nhj-C2-g0t"/>
+                        <segue destination="M1Y-1K-NlU" kind="unwind" identifier="unwindToCurrentMatch" unwindAction="unwindToCurrentMatch:" id="h7O-FW-dml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGc-qf-wst" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M1Y-1K-NlU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="717" y="1101"/>
+            <point key="canvasLocation" x="1121" y="693"/>
         </scene>
         <!--Current Match View Controller-->
         <scene sceneID="kFI-BF-UfX">
             <objects>
-                <viewController id="igK-bJ-bW2" customClass="CurrentMatchViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="igK-bJ-bW2" customClass="CurrentMatchViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZd-fi-p8f"/>
                         <viewControllerLayoutGuide type="bottom" id="XlK-jJ-vIk"/>
@@ -199,19 +216,60 @@
                                 <rect key="frame" x="0.0" y="264" width="600" height="336"/>
                                 <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QueueItemCellID" textLabel="DRs-Sl-QVx" style="IBUITableViewCellStyleDefault" id="E9o-lc-77o">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QueueItemCellID" rowHeight="61" id="E9o-lc-77o" customClass="QueueItemCell" customModule="Tekken_Time" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9o-lc-77o" id="Tea-8Y-3S9">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DRs-Sl-QVx">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-qN-FLk">
+                                                    <rect key="frame" x="70" y="20" width="105" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_20" translatesAutoresizingMaskIntoConstraints="NO" id="ILu-G8-hTM" customClass="AvatarView" customModule="Tekken_Time" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="FYL-0b-Uxw"/>
+                                                        <constraint firstAttribute="width" secondItem="ILu-G8-hTM" secondAttribute="height" multiplier="1:1" id="pX8-SE-XcM"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSelected" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-64-OwO">
+                                                    <rect key="frame" x="565" y="22" width="27" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DUa-qN-FLk" firstAttribute="leading" secondItem="ILu-G8-hTM" secondAttribute="trailing" constant="18" id="1cG-qw-l0O"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ayn-64-OwO" secondAttribute="trailing" id="BYL-8W-eg6"/>
+                                                <constraint firstAttribute="centerY" secondItem="ayn-64-OwO" secondAttribute="centerY" id="CDJ-OZ-yEO"/>
+                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="centerY" secondItem="DUa-qN-FLk" secondAttribute="centerY" id="TFl-Th-40l"/>
+                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="leading" secondItem="Tea-8Y-3S9" secondAttribute="leadingMargin" id="ZuX-pX-GVw"/>
+                                                <constraint firstAttribute="centerY" secondItem="ILu-G8-hTM" secondAttribute="centerY" id="jnr-i7-ocq"/>
+                                                <constraint firstAttribute="centerY" secondItem="ILu-G8-hTM" secondAttribute="centerY" id="qXt-jy-4Bx"/>
+                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tea-8Y-3S9" secondAttribute="topMargin" id="uZ4-Cs-MAm"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ILu-G8-hTM" secondAttribute="bottom" id="z8s-nP-K1a"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="qXt-jy-4Bx"/>
+                                                    <exclude reference="uZ4-Cs-MAm"/>
+                                                    <exclude reference="z8s-nP-K1a"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="playerAvatarsView" destination="ILu-G8-hTM" id="r0u-zd-7Vq"/>
+                                            <outlet property="playerNameLabel" destination="DUa-qN-FLk" id="Lqc-C2-pnC"/>
+                                            <outlet property="queuedTimeLabel" destination="ayn-64-OwO" id="EgB-t8-NoD"/>
+                                            <segue destination="y4c-Mn-RW0" kind="show" identifier="chooseCharacterSegue" id="Ln9-uQ-x9y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -241,15 +299,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ia8-iB-TwJ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="la3-bR-G8N">
-                            <connections>
-                                <segue destination="y4c-Mn-RW0" kind="show" id="gCd-Cd-1lc"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="la3-bR-G8N"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qlY-Lg-ttC">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="LIx-MO-EhP" kind="show" id="u91-SE-UG1"/>
+                                <segue destination="LIx-MO-EhP" kind="show" identifier="joinQueueSegue" id="u91-SE-UG1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -259,7 +313,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1Y-rL-7AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="1127"/>
+            <point key="canvasLocation" x="252" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="player_20" width="106" height="106"/>
+    </resources>
 </document>

@@ -28,6 +28,11 @@ class SessionDataStore {
         query()
     }
     
+    func update() -> SessionDataStore {
+        query()
+        return self
+    }
+    
     private func query(){
         loaded = false
         getter.get {

@@ -10,11 +10,16 @@ import Foundation
 
 class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
 
+    let tableView:UITableView
     let notificationManager = NotificationManager()
     var queue:Queue = []
     
-    override init(){
+    init(tableView: UITableView){
+        self.tableView = tableView
         super.init()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        updateData()
         notificationManager.registerObserver(SessionDataStoreNotificationName, block: { event in
             self.updateData()
         })
@@ -24,12 +29,21 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
         notificationManager.deregisterAll()
     }
     
+    func forceUpdate(){
+        SessionDataStore.sharedInstance.update()
+    }
+    
     func updateData(){
         queue = SessionDataStore.sharedInstance.queue
+        tableView.reloadData()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 61
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,8 +54,8 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("QueueItemCellID") as UITableViewCell
-        cell.textLabel?.text = queue[indexPath.row].player.person.name
+        let cell = tableView.dequeueReusableCellWithIdentifier("QueueItemCellID", forIndexPath: indexPath) as QueueItemCell
+        cell.queueItem  = queue[indexPath.row]
         return cell
     }
 

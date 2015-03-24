@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+private let _emptyPlayerImage:UIImage! = UIImage(named: "player_empty")
 class CharacterPresenter {
     let character:Character
     
@@ -21,6 +22,16 @@ class CharacterPresenter {
     }
     
     func image() -> UIImage {
-        return UIImage(named: "player_\(self.character.characterId)")!
+        return CharacterPresenter.image(self.character)
     }
+    
+    class func image(character: Character?) -> UIImage{
+        if let char = character {
+            return UIImage(named: "player_\(char.characterId)") ?? _emptyPlayerImage
+        } else {
+            return _emptyPlayerImage
+        }
+    }
+    
+    
 }

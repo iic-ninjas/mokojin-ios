@@ -123,12 +123,11 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         JoinQueueOperation().run(person, callback: { (result, err) -> Void in
             ProgressHUD.dismiss()
             self.done()
-        })
-        
+        })    
     }
     
     private func done(){
-        
+        self.performSegueWithIdentifier("unwindToCurrentMatch", sender: self)
     }
     
     private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
