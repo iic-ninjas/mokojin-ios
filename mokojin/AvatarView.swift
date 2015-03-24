@@ -9,7 +9,19 @@
 import Foundation
 import UIKit
 
-@IBDesignable class AvatarView: UIImageView {
+class AvatarView: UIImageView {
+    
+    var isSelected:Bool = false {
+        didSet {
+            if self.isSelected {
+                self.layer.borderWidth = 5
+                self.layer.borderColor = UIColor.redColor().CGColor
+            } else {
+                self.layer.borderWidth = 0
+            }
+        }
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
