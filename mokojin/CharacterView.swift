@@ -50,7 +50,7 @@ import UIKit
     
     private func setup() {
         if !self.loadedXib {
-            let view = NSBundle.mainBundle().loadNibNamed("CharacterView", owner: self, options: nil)[0] as UIView
+            let view = NSBundle.mainBundle().loadNibNamed("CharacterView", owner: self, options: nil).first as UIView
             view.frame = self.bounds
             self.addSubview(view)
             self.loadedXib = true
