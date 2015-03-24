@@ -13,28 +13,23 @@ import UIKit
 class AvatarView: UIImageView {
     
     @IBInspectable
-    var isMasking:Bool = false {
+    var borderColor:UIColor = UIColor.clearColor()
+    
+    @IBInspectable
+    var hasBorder:Bool = false {
         didSet {
-            if self.isMasking {
-                self.layer.borderWidth = 2
-                self.layer.borderColor = Constants.Colors.lightBackgroundColor.CGColor
+            if hasBorder {
+                self.layer.borderWidth = AvatarView.getBorderWidth(self.layer.frame.width)
+                self.layer.borderColor = self.borderColor.CGColor
             } else {
                 self.layer.borderWidth = 0
+                self.layer.borderColor = UIColor.clearColor().CGColor
             }
         }
     }
     
-    
-    @IBInspectable
-    var isSelected:Bool = false {
-        didSet {
-            if self.isSelected {
-                self.layer.borderWidth = 5
-                self.layer.borderColor = Constants.Colors.primaryColor.CGColor
-            } else {
-                self.layer.borderWidth = 0
-            }
-        }
+    class func getBorderWidth(width:CGFloat) -> CGFloat{
+        return ceil(width/22.0)
     }
     
     required init(coder aDecoder: NSCoder) {

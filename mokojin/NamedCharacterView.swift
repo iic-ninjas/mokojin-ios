@@ -20,7 +20,7 @@ class NamedCharacterView: UIXibView {
     
     var isSelected:Bool = false {
         didSet {
-            self.avatarView.isSelected = self.isSelected
+            self.avatarView.hasBorder = self.isSelected
             if self.isSelected {
                 self.nameView.textColor = Constants.Colors.lightTextColor
                 self.nameView.backgroundColor = Constants.Colors.primaryColor

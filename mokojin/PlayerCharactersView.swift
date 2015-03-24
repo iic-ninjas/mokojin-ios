@@ -40,8 +40,8 @@ class PlayerCharactersView : UIXibView {
                     self.characterViewB.hidden = false
                     self.characterViewB.image = CharacterPresenter.image(character)
                     stickToLeftConstraint.priority = _highPriority
-                    self.characterViewA.isMasking = direction.isMasking().right
-                    self.characterViewB.isMasking = direction.isMasking().left
+                    self.characterViewA.hasBorder = direction.isMasking().right
+                    self.characterViewB.hasBorder = direction.isMasking().left
                 } else {
                     self.characterViewB.hidden = true
                     stickToLeftConstraint.priority = _lowPriority
@@ -53,6 +53,14 @@ class PlayerCharactersView : UIXibView {
     @IBOutlet weak var characterViewA: AvatarView!
     @IBOutlet weak var characterViewB: AvatarView!
 
+    @IBInspectable
+    var borderColor:UIColor = UIColor.clearColor() {
+        didSet {
+            self.characterViewA.borderColor = self.borderColor
+            self.characterViewB.borderColor = self.borderColor
+        }
+    }
+    
     @IBInspectable
     var direction:Direction = Direction.LeftToRight {
         didSet {
