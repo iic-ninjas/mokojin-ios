@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -25,14 +25,14 @@
                     <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Nxi-BH-qQH">
-                    <rect key="frame" x="204" y="37" width="72" height="72"/>
+                    <rect key="frame" x="204" y="0.0" width="72" height="72"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="Nxi-BH-qQH" secondAttribute="centerX" id="2bt-SC-iAc"/>
                 <constraint firstItem="WCU-VW-Qf5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BFo-RX-59z"/>
-                <constraint firstItem="Nxi-BH-qQH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="37" id="IVB-nV-ABy"/>
+                <constraint firstItem="Nxi-BH-qQH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IVB-nV-ABy"/>
                 <constraint firstAttribute="trailing" secondItem="qwZ-8x-7GU" secondAttribute="trailing" id="OtJ-Qo-KBl"/>
                 <constraint firstItem="qwZ-8x-7GU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W66-da-GhZ"/>
                 <constraint firstAttribute="trailing" secondItem="WCU-VW-Qf5" secondAttribute="trailing" id="ZTH-D0-4xi"/>

@@ -10,8 +10,17 @@ import Foundation
 
 class CurrentMatchViewController : UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    let queueTableDelegate = QueueTableDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let image = UIImage(named: "AppLogo")
+        self.navigationItem.titleView = UIImageView(image: image)
+        
+        self.tableView.delegate = queueTableDelegate
+        self.tableView.dataSource = queueTableDelegate
     }
     
 }
