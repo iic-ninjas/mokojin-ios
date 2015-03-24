@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */; };
+		CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D861AC01AD800BC5138 /* AvatarView.swift */; };
+		CA413D891AC036A600BC5138 /* NamedCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D881AC036A600BC5138 /* NamedCharacterView.swift */; };
+		CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */; };
+		CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */; };
+		CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */; };
+		CA413D921AC04DAE00BC5138 /* NamedCharacterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA413D911AC04DAE00BC5138 /* NamedCharacterView.xib */; };
+		CA4832761AC180AE00862CC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832751AC180AE00862CC3 /* Constants.swift */; };
+		CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832781AC1914700862CC3 /* CharacterPresenter.swift */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -53,6 +61,14 @@
 		2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
 		B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.debug.xcconfig"; sourceTree = "<group>"; };
+		CA413D861AC01AD800BC5138 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		CA413D881AC036A600BC5138 /* NamedCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedCharacterView.swift; sourceTree = "<group>"; };
+		CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListenerViewController.swift; sourceTree = "<group>"; };
+		CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCharactersViewController.swift; sourceTree = "<group>"; };
+		CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCellView.swift; sourceTree = "<group>"; };
+		CA413D911AC04DAE00BC5138 /* NamedCharacterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NamedCharacterView.xib; sourceTree = "<group>"; };
+		CA4832751AC180AE00862CC3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CA4832781AC1914700862CC3 /* CharacterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tekken Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +138,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA413D851AC01ABC00BC5138 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CA413D901AC04D8C00BC5138 /* NamedCharacterView */,
+				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
+				CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		CA413D901AC04D8C00BC5138 /* NamedCharacterView */ = {
+			isa = PBXGroup;
+			children = (
+				CA413D881AC036A600BC5138 /* NamedCharacterView.swift */,
+				CA413D911AC04DAE00BC5138 /* NamedCharacterView.xib */,
+			);
+			name = NamedCharacterView;
+			sourceTree = "<group>";
+		};
+		CA4832771AC1913900862CC3 /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				CA4832781AC1914700862CC3 /* CharacterPresenter.swift */,
+			);
+			name = presenters;
+			sourceTree = "<group>";
+		};
 		ED1CDA851ABF1BEE00F52413 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +188,8 @@
 		ED1CDA901ABF1BEE00F52413 /* mokojin */ = {
 			isa = PBXGroup;
 			children = (
+				CA4832771AC1913900862CC3 /* presenters */,
+				CA413D851AC01ABC00BC5138 /* views */,
 				ED605C901AC0054C00243FC1 /* controllers */,
 				ED605C8C1ABFFF2E00243FC1 /* cloud */,
 				EDD2A2D31ABF310D00B2AC91 /* datastores */,
@@ -208,6 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */,
+				CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */,
+				CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */,
 				ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */,
 			);
 			name = controllers;
@@ -217,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				ED605C941AC00A7500243FC1 /* NotificationManager.swift */,
+				CA4832751AC180AE00862CC3 /* Constants.swift */,
 				ED338B841AC056720095FF7E /* ProgressHUD.swift */,
 			);
 			name = utils;
@@ -342,6 +390,7 @@
 			files = (
 				ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */,
 				ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */,
+				CA413D921AC04DAE00BC5138 /* NamedCharacterView.xib in Resources */,
 				ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */,
 				1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */,
 			);
@@ -400,7 +449,11 @@
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
+				CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */,
+				CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */,
 				ED605CAC1AC0174B00243FC1 /* GoodNightOperaiton.swift in Sources */,
+				CA413D891AC036A600BC5138 /* NamedCharacterView.swift in Sources */,
+				CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */,
 				ED605C9F1AC010E400243FC1 /* GetCharacters.swift in Sources */,
 				ED605CB21AC0183000243FC1 /* LeaveQueueOperation.swift in Sources */,
 				ED605CB41AC0186C00243FC1 /* SetCharactersOperation.swift in Sources */,
@@ -410,13 +463,16 @@
 				ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */,
 				ED605CB01AC017F100243FC1 /* JoinQueueOperation.swift in Sources */,
 				ED605C971AC00C1300243FC1 /* Player.swift in Sources */,
+				CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */,
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
 				ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
+				CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */,
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
 				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,
 				ED605C991AC00E5D00243FC1 /* Character.swift in Sources */,
+				CA4832761AC180AE00862CC3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
