@@ -50,13 +50,14 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
         return queue.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QueueItemCellID", forIndexPath: indexPath) as QueueItemCell
         cell.queueItem  = queue[indexPath.row]
         return cell
     }
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.setSelected(false, animated: false)
+    }
+    
 }
