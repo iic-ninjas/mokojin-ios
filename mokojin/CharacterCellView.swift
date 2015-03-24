@@ -12,4 +12,9 @@ import UIKit
 class CharacterCellView: UICollectionViewCell {
     
     @IBOutlet weak var characterView: CharacterView!
+    var isSelected:Bool = false {
+        didSet {
+            self.characterView.isSelected = self.isSelected
+        }
+    }
 }

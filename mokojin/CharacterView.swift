@@ -16,6 +16,21 @@ import UIKit
         }
     }
     
+    var isSelected:Bool = false {
+        didSet {
+            if self.isSelected {
+                self.avatarView.layer.borderWidth = 5
+                self.avatarView.layer.borderColor = UIColor.redColor().CGColor
+                self.nameView.textColor = UIColor.whiteColor()
+                self.nameView.backgroundColor = UIColor.redColor()
+            } else {
+                self.avatarView.layer.borderWidth = 0
+                self.nameView.textColor = UIColor.blackColor()
+                self.nameView.backgroundColor = UIColor.clearColor()
+            }
+        }
+    }
+    
     @IBOutlet weak var avatarView: AvatarView!
     @IBOutlet weak var nameView: UITextView!
     
