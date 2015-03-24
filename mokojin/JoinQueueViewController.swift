@@ -58,7 +58,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         tableView.reloadData()
     }
     
-
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
@@ -78,26 +78,26 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
             return 0
         }
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
-            case 0: addNewPerson()
-            case 1: addExistingPerson(personAtIndex(tableView, indexPath: indexPath))
-            default: assertionFailure("Table only supports up to 2 sections")
+        case 0: addNewPerson()
+        case 1: addExistingPerson(personAtIndex(tableView, indexPath: indexPath))
+        default: assertionFailure("Table only supports up to 2 sections")
         }
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID") as UITableViewCell
         switch indexPath.section {
-            case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
-            case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
-            default: assertionFailure("Table only supports up to 2 sections")
+        case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
+        case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
+        default: assertionFailure("Table only supports up to 2 sections")
         }
-
+        
         return cell
     }
-
+    
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
         self.searchQuery = searchString
         self.searchResults = self.people.filter {
@@ -105,7 +105,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         }
         return true
     }
-
+    
     private func addNewPerson(){
         ProgressHUD.show("Creating new user")
         let name = self.searchQuery
@@ -117,20 +117,20 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
             }
         })
     }
-
+    
     private func addExistingPerson(person:Person){
         ProgressHUD.show("Adding to Queue")
         JoinQueueOperation().run(person, callback: { (result, err) -> Void in
             ProgressHUD.dismiss()
             self.done()
         })
-
+        
     }
     
     private func done(){
         
     }
-
+    
     private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
         if inSearchResults(tableView){
             return searchResults[indexPath.row]
@@ -138,11 +138,11 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
             return people[indexPath.row]
         }
     }
-
+    
     private func inSearchResults(tableView: UITableView) -> Bool{
         return tableView == searchDisplayController?.searchResultsTableView
     }
-
+    
     private func searchQueryIsNewPlayer() -> Bool{
         if searchQuery.isEmpty {
             return false
@@ -150,5 +150,5 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
             return self.people.filter{ $0.name.lowercaseString == self.searchQuery.lowercaseString }.isEmpty
         }
     }
-
+    
 }
