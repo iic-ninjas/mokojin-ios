@@ -139,8 +139,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="CharacterView" customModule="Tekken_Time" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="94" height="145"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="NamedCharacterView" customModule="Tekken_Time" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="94" height="117"/>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -152,7 +152,7 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="bWt-Al-RS1" secondAttribute="bottom" id="fub-tN-2mr"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="characterView" destination="bWt-Al-RS1" id="2vr-Bg-AzP"/>
+                                            <outlet property="characterView" destination="bWt-Al-RS1" id="57v-53-fZQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

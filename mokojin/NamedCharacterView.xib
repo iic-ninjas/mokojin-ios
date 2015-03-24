@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterView" customModule="mokojin" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NamedCharacterView" customModule="Tekken_Time" customModuleProvider="target">
             <connections>
-                <outlet property="avatarView" destination="J4c-r1-NGF" id="S1a-HI-ujH"/>
-                <outlet property="nameView" destination="bPX-QV-plO" id="rAb-9u-CoZ"/>
+                <outlet property="avatarView" destination="J4c-r1-NGF" id="5VN-vJ-UZN"/>
+                <outlet property="nameView" destination="bPX-QV-plO" id="pwt-xh-GBT"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-r1-NGF" customClass="AvatarView" customModule="mokojin" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-r1-NGF" customClass="AvatarView" customModule="Tekken_Time" customModuleProvider="target">
                     <rect key="frame" x="253" y="0.0" width="94" height="94"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="94" id="MyX-f3-Xi5"/>

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable class CharacterView: UIView {
+class NamedCharacterView: UIView {
     var character:Character = Character() {
         didSet {
             setup()
@@ -50,13 +50,13 @@ import UIKit
     
     private func setup() {
         if !self.loadedXib {
-            let view = NSBundle.mainBundle().loadNibNamed("CharacterView", owner: self, options: nil).first as UIView
+            let view = NSBundle.mainBundle().loadNibNamed("NamedCharacterView", owner: self, options: nil).first as UIView
             view.frame = self.bounds
             self.addSubview(view)
             self.loadedXib = true
         }
-        
-        self.nameView.text = self.character.name
-        self.avatarView.image = UIImage(named: "player_\(self.character.characterId)")
+        let presenter = CharacterPresenter(character: self.character)
+        self.nameView.text = presenter.displayName()
+        self.avatarView.image = presenter.image()
     }
 }
