@@ -23,6 +23,9 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
         notificationManager.registerObserver(SessionDataStoreNotificationName, block: { event in
             self.updateData()
         })
+        NSTimer.scheduledTimerWithTimeInterval(1.0, block: {
+            self.updateData()
+            }, repeats: true)
     }
     
     deinit {
