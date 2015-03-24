@@ -26,6 +26,9 @@
 		ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773441AC1867000216F2B /* QueueTableDelegate.swift */; };
 		ED3773471AC19A2500216F2B /* QueueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773461AC19A2500216F2B /* QueueItemCell.swift */; };
 		ED3773491AC1A1AE00216F2B /* QueuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */; };
+		ED37734B1AC1B8B800216F2B /* PlayerCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37734A1AC1B8B800216F2B /* PlayerCharactersView.swift */; };
+		ED37734E1AC1BDC600216F2B /* UIXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37734D1AC1BDC600216F2B /* UIXibView.swift */; };
+		ED3773501AC1C2D500216F2B /* PlayerCharactersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED37734F1AC1C2D500216F2B /* PlayerCharactersView.xib */; };
 		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
@@ -85,6 +88,9 @@
 		ED3773441AC1867000216F2B /* QueueTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTableDelegate.swift; sourceTree = "<group>"; };
 		ED3773461AC19A2500216F2B /* QueueItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItemCell.swift; sourceTree = "<group>"; };
 		ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueuePresenter.swift; sourceTree = "<group>"; };
+		ED37734A1AC1B8B800216F2B /* PlayerCharactersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCharactersView.swift; sourceTree = "<group>"; };
+		ED37734D1AC1BDC600216F2B /* UIXibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIXibView.swift; sourceTree = "<group>"; };
+		ED37734F1AC1C2D500216F2B /* PlayerCharactersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCharactersView.xib; sourceTree = "<group>"; };
 		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			children = (
 				CA413D901AC04D8C00BC5138 /* NamedCharacterView */,
 				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
+				ED37734C1AC1BCE300216F2B /* PlayerCharactersView */,
 				CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */,
 				ED3773461AC19A2500216F2B /* QueueItemCell.swift */,
 			);
@@ -238,6 +245,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ED37734C1AC1BCE300216F2B /* PlayerCharactersView */ = {
+			isa = PBXGroup;
+			children = (
+				ED37734A1AC1B8B800216F2B /* PlayerCharactersView.swift */,
+				ED37734F1AC1C2D500216F2B /* PlayerCharactersView.xib */,
+			);
+			name = PlayerCharactersView;
+			sourceTree = "<group>";
+		};
 		ED605C8C1ABFFF2E00243FC1 /* cloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +291,7 @@
 				ED605C941AC00A7500243FC1 /* NotificationManager.swift */,
 				CA4832751AC180AE00862CC3 /* Constants.swift */,
 				ED338B841AC056720095FF7E /* ProgressHUD.swift */,
+				ED37734D1AC1BDC600216F2B /* UIXibView.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -398,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */,
+				ED3773501AC1C2D500216F2B /* PlayerCharactersView.xib in Resources */,
 				ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */,
 				CA413D921AC04DAE00BC5138 /* NamedCharacterView.xib in Resources */,
 				ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */,
@@ -461,6 +479,7 @@
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
 				CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */,
+				ED37734B1AC1B8B800216F2B /* PlayerCharactersView.swift in Sources */,
 				CA413D8D1AC03BBB00BC5138 /* SelectCharactersViewController.swift in Sources */,
 				ED605CAC1AC0174B00243FC1 /* GoodNightOperaiton.swift in Sources */,
 				CA413D891AC036A600BC5138 /* NamedCharacterView.swift in Sources */,
@@ -480,6 +499,7 @@
 				ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
+				ED37734E1AC1BDC600216F2B /* UIXibView.swift in Sources */,
 				CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */,
 				ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */,
 				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,

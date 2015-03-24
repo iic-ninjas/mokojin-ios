@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-class NamedCharacterView: UIView {
+class NamedCharacterView: UIXibView {
     var character:Character = Character() {
         didSet {
-            setup()
+            let presenter = CharacterPresenter(character: self.character)
+            self.nameView.text = presenter.displayName()
+            self.avatarView.image = presenter.image()
         }
     }
     
@@ -31,32 +33,9 @@ class NamedCharacterView: UIView {
     
     @IBOutlet weak var avatarView: AvatarView!
     @IBOutlet weak var nameView: UILabel!
-    
-    private var loadedXib: Bool = false
-
-    init(character: Character) {
-        super.init()
-        self.character = character
-        setup()
-    }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    private func setup() {
-        if !self.loadedXib {
-            let view = NSBundle.mainBundle().loadNibNamed("NamedCharacterView", owner: self, options: nil).first as UIView
-            view.frame = self.bounds
-            self.addSubview(view)
-            self.loadedXib = true
-        }
-        let presenter = CharacterPresenter(character: self.character)
-        self.nameView.text = presenter.displayName()
-        self.avatarView.image = presenter.image()
-    }
+
 }

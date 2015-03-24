@@ -222,50 +222,38 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-qN-FLk">
-                                                    <rect key="frame" x="70" y="20" width="105" height="21"/>
+                                                    <rect key="frame" x="100" y="17" width="105" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_20" translatesAutoresizingMaskIntoConstraints="NO" id="ILu-G8-hTM" customClass="AvatarView" customModule="Tekken_Time" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="44" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="FYL-0b-Uxw"/>
-                                                        <constraint firstAttribute="width" secondItem="ILu-G8-hTM" secondAttribute="height" multiplier="1:1" id="pX8-SE-XcM"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSelected" value="NO"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-64-OwO">
                                                     <rect key="frame" x="565" y="22" width="27" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9U-ha-dSM" customClass="PlayerCharactersView" customModule="Tekken_Time" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="6" width="66" height="44"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Mn2-K8-ivC"/>
+                                                        <constraint firstAttribute="width" secondItem="v9U-ha-dSM" secondAttribute="height" multiplier="1.5:1" id="rN1-h5-ylM"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DUa-qN-FLk" firstAttribute="leading" secondItem="ILu-G8-hTM" secondAttribute="trailing" constant="18" id="1cG-qw-l0O"/>
+                                                <constraint firstItem="v9U-ha-dSM" firstAttribute="leading" secondItem="Tea-8Y-3S9" secondAttribute="leadingMargin" id="1j5-E4-qDh"/>
+                                                <constraint firstAttribute="centerY" secondItem="DUa-qN-FLk" secondAttribute="centerY" constant="2.5" id="2vR-uF-tJe"/>
+                                                <constraint firstAttribute="centerY" secondItem="v9U-ha-dSM" secondAttribute="centerY" constant="2" id="6kA-EG-fNR"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ayn-64-OwO" secondAttribute="trailing" id="BYL-8W-eg6"/>
                                                 <constraint firstAttribute="centerY" secondItem="ayn-64-OwO" secondAttribute="centerY" id="CDJ-OZ-yEO"/>
-                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="centerY" secondItem="DUa-qN-FLk" secondAttribute="centerY" id="TFl-Th-40l"/>
-                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="leading" secondItem="Tea-8Y-3S9" secondAttribute="leadingMargin" id="ZuX-pX-GVw"/>
-                                                <constraint firstAttribute="centerY" secondItem="ILu-G8-hTM" secondAttribute="centerY" id="jnr-i7-ocq"/>
-                                                <constraint firstAttribute="centerY" secondItem="ILu-G8-hTM" secondAttribute="centerY" id="qXt-jy-4Bx"/>
-                                                <constraint firstItem="ILu-G8-hTM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tea-8Y-3S9" secondAttribute="topMargin" id="uZ4-Cs-MAm"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ILu-G8-hTM" secondAttribute="bottom" id="z8s-nP-K1a"/>
+                                                <constraint firstItem="DUa-qN-FLk" firstAttribute="leading" secondItem="v9U-ha-dSM" secondAttribute="trailing" constant="26" id="pNL-fx-2tF"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="qXt-jy-4Bx"/>
-                                                    <exclude reference="uZ4-Cs-MAm"/>
-                                                    <exclude reference="z8s-nP-K1a"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="playerAvatarsView" destination="ILu-G8-hTM" id="r0u-zd-7Vq"/>
+                                            <outlet property="playerCharacterView" destination="v9U-ha-dSM" id="Del-1Z-JZ5"/>
                                             <outlet property="playerNameLabel" destination="DUa-qN-FLk" id="Lqc-C2-pnC"/>
                                             <outlet property="queuedTimeLabel" destination="ayn-64-OwO" id="EgB-t8-NoD"/>
                                             <segue destination="y4c-Mn-RW0" kind="show" identifier="chooseCharacterSegue" id="Ln9-uQ-x9y"/>
@@ -316,7 +304,4 @@
             <point key="canvasLocation" x="252" y="343"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="player_20" width="106" height="106"/>
-    </resources>
 </document>

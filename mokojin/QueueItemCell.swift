@@ -10,7 +10,7 @@ import Foundation
 
 class QueueItemCell : UITableViewCell {
     
-    @IBOutlet weak var playerAvatarsView: AvatarView!
+    @IBOutlet weak var playerCharacterView: PlayerCharactersView!
     @IBOutlet weak var queuedTimeLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     
@@ -23,7 +23,7 @@ class QueueItemCell : UITableViewCell {
             if let queueItem = self.queueItem {
                 playerNameLabel.text = queueItem.player.person.name
                 queuedTimeLabel.text = QueuePresenter.timeago(queueItem.createdAt)
-                playerAvatarsView.image = CharacterPresenter.image(queueItem.player.characterA)
+                playerCharacterView.player = queueItem.player
             }
         }
     }
