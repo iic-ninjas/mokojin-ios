@@ -12,8 +12,9 @@ import Parse
 class GetPeople {
     func get(callback: (People)->()){
         PFCloud.callFunctionInBackground("getPeople", withParameters: nil) { (rawResponse, err) -> Void in
-            let people = rawResponse as People
-            callback(people)
+            if let people = rawResponse as? People {
+                callback(people)
+            }
         }
     }
 

@@ -15,6 +15,7 @@
 		ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */; };
 		ED1CDAAA1ABF1BEE00F52413 /* mokojinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */; };
 		ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED338B841AC056720095FF7E /* ProgressHUD.swift */; };
+		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
 		ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
@@ -62,6 +63,7 @@
 		ED1CDAA81ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mokojinTests.swift; sourceTree = "<group>"; };
 		ED338B841AC056720095FF7E /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
 		ED605C941AC00A7500243FC1 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */,
+				ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED605CA31AC0120700243FC1 /* GetSessionData.swift in Sources */,
+				ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */,
 				ED605CAE1AC0178400243FC1 /* InvitePlayersOperation.swift in Sources */,
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
