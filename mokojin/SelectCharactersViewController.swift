@@ -42,11 +42,13 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
         return self.characters.count
     }
     
+    // MARK: CollectionViewDelegate & CollectionViewDataSource
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CharacterCellID", forIndexPath: indexPath) as CharacterCellView
         let character = self.characters[indexPath.row]
         cell.characterView.character = character
-        cell.isSelected = (self.firstSelection?.character == character || self.secondSelection?.character == character)
+        cell.isSelected = isCharacterSelected(character)
         return cell
     }
     
@@ -60,6 +62,12 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
         let cell:CharacterCellView = collectionView.cellForItemAtIndexPath(indexPath) as CharacterCellView
         removeSelection(cell.characterView.character)
         cell.isSelected = false
+    }
+    
+    // MARK: Selection Logic
+    
+    private func isCharacterSelected(character: Character) -> Bool {
+        return (self.firstSelection?.character == character || self.secondSelection?.character == character)
     }
     
     private func addSelection(newSelection: CharacterSelection) {
