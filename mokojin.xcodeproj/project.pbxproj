@@ -14,12 +14,15 @@
 		CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */; };
 		CA413D921AC04DAE00BC5138 /* CharacterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA413D911AC04DAE00BC5138 /* CharacterView.xib */; };
 		CA4832761AC180AE00862CC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832751AC180AE00862CC3 /* Constants.swift */; };
+		1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
 		ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */; };
 		ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */; };
 		ED1CDAAA1ABF1BEE00F52413 /* mokojinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */; };
+		ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED338B841AC056720095FF7E /* ProgressHUD.swift */; };
+		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
 		ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
@@ -53,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Obj-C-Bridge.h"; sourceTree = "<group>"; };
 		2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
 		B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		CA413D911AC04DAE00BC5138 /* CharacterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterView.xib; sourceTree = "<group>"; };
 		CA4832751AC180AE00862CC3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tekken Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDA981ABF1BEE00F52413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +77,8 @@
 		ED1CDAA31ABF1BEE00F52413 /* mokojinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mokojinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDAA81ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDAA91ABF1BEE00F52413 /* mokojinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mokojinTests.swift; sourceTree = "<group>"; };
+		ED338B841AC056720095FF7E /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
 		ED605C941AC00A7500243FC1 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -163,7 +170,7 @@
 		ED1CDA8F1ABF1BEE00F52413 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */,
+				ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */,
 				ED1CDAA31ABF1BEE00F52413 /* mokojinTests.xctest */,
 			);
 			name = Products;
@@ -191,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1CDA921ABF1BEE00F52413 /* Info.plist */,
+				1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */,
 				CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */,
 				CA413D8C1AC03BBB00BC5138 /* SelectCharactersViewController.swift */,
+				ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			children = (
 				ED605C941AC00A7500243FC1 /* NotificationManager.swift */,
 				CA4832751AC180AE00862CC3 /* Constants.swift */,
+				ED338B841AC056720095FF7E /* ProgressHUD.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -305,7 +315,7 @@
 			);
 			name = mokojin;
 			productName = mokojin;
-			productReference = ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */;
+			productReference = ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ED1CDAA21ABF1BEE00F52413 /* mokojinTests */ = {
@@ -372,6 +382,7 @@
 				ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */,
 				CA413D921AC04DAE00BC5138 /* CharacterView.xib in Resources */,
 				ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */,
+				1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED605CA31AC0120700243FC1 /* GetSessionData.swift in Sources */,
+				ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */,
 				ED605CAE1AC0178400243FC1 /* InvitePlayersOperation.swift in Sources */,
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
@@ -442,6 +454,7 @@
 				ED605C971AC00C1300243FC1 /* Player.swift in Sources */,
 				CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */,
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
+				ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
 				CA413D8F1AC0424F00BC5138 /* CharacterCellView.swift in Sources */,
@@ -577,7 +590,8 @@
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tekken Time";
+				SWIFT_OBJC_BRIDGING_HEADER = "mokojin/Obj-C-Bridge.h";
 			};
 			name = Debug;
 		};
@@ -589,7 +603,8 @@
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tekken Time";
+				SWIFT_OBJC_BRIDGING_HEADER = "mokojin/Obj-C-Bridge.h";
 			};
 			name = Release;
 		};

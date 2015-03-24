@@ -26,6 +26,11 @@ class PeopleStore {
         query()
     }
     
+    func update() -> PeopleStore {
+        query()
+        return self
+    }
+    
     private func query(){
         loaded = false
         getter.get {

@@ -9,31 +9,55 @@
 import Foundation
 import UIKit
 
-class JoinQueueViewController : NotificationListenerViewController, UITableViewDataSource, UITableViewDelegate {
+class JoinQueueViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate {
     
     @IBOutlet var tableView: UITableView!
     var people:People = []
     var searchResults:People = []
     var searchQuery:String = ""
+    let notificationManager = NotificationManager()
+    
+    override init() {
+        super.init()
+        self.listenOnEvents()
+    }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
+        self.listenOnEvents()
     }
+    
+    private func listenOnEvents(){
+        notificationManager.registerObserver(PeopleStoreNotificationName, block: { notification in
+            self.updateData()
+        })
+        notificationManager.registerObserver(SessionDataStoreNotificationName, block: { notification in
+            self.updateData()
+        })
+    }
+    
+    deinit {
+        notificationManager.deregisterAll()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        updateData()
     }
     
-    override func getNotificationName() -> String {
-        return PeopleStoreNotificationName
+    
+    private func updateData(){
+        let allPeople = PeopleStore.sharedInstance.update().people
+        let playingPeople = SessionDataStore.sharedInstance.currentPlayingPeople()
+        self.people = allPeople.filter {
+            !contains(playingPeople, $0)
+        }
+        tableView.reloadData()
     }
     
-    override func updateData(){
-        self.people = PeopleStore.sharedInstance.people
-        self.tableView.reloadData()
-    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
@@ -54,25 +78,26 @@ class JoinQueueViewController : NotificationListenerViewController, UITableViewD
             return 0
         }
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
-            case 0: addNewPerson()
-            case 1: addExistingPerson(personAtIndex(tableView, indexPath: indexPath))
-            default: assertionFailure("Table only supports up to 2 sections")
+        case 0: addNewPerson()
+        case 1: addExistingPerson(personAtIndex(tableView, indexPath: indexPath))
+        default: assertionFailure("Table only supports up to 2 sections")
         }
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID") as UITableViewCell
         switch indexPath.section {
-            case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
-            case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
-            default: assertionFailure("Table only supports up to 2 sections")
+        case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
+        case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name
+        default: assertionFailure("Table only supports up to 2 sections")
         }
+        
         return cell
     }
-
+    
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool{
         self.searchQuery = searchString
         self.searchResults = self.people.filter {
@@ -80,15 +105,32 @@ class JoinQueueViewController : NotificationListenerViewController, UITableViewD
         }
         return true
     }
-
+    
     private func addNewPerson(){
-
+        ProgressHUD.show("Creating new user")
+        let name = self.searchQuery
+        CreatePersonOperation().run(name, callback: { (raw, err) -> Void in
+            if let person = raw as? Person {
+                self.addExistingPerson(person)
+            } else {
+                ProgressHUD.dismiss()
+            }
+        })
     }
-
+    
     private func addExistingPerson(person:Person){
-
+        ProgressHUD.show("Adding to Queue")
+        JoinQueueOperation().run(person, callback: { (result, err) -> Void in
+            ProgressHUD.dismiss()
+            self.done()
+        })
+        
     }
-
+    
+    private func done(){
+        
+    }
+    
     private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {
         if inSearchResults(tableView){
             return searchResults[indexPath.row]
@@ -96,11 +138,11 @@ class JoinQueueViewController : NotificationListenerViewController, UITableViewD
             return people[indexPath.row]
         }
     }
-
+    
     private func inSearchResults(tableView: UITableView) -> Bool{
         return tableView == searchDisplayController?.searchResultsTableView
     }
-
+    
     private func searchQueryIsNewPlayer() -> Bool{
         if searchQuery.isEmpty {
             return false
@@ -108,5 +150,5 @@ class JoinQueueViewController : NotificationListenerViewController, UITableViewD
             return self.people.filter{ $0.name.lowercaseString == self.searchQuery.lowercaseString }.isEmpty
         }
     }
-
+    
 }

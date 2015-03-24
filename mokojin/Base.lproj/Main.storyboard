@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LKw-p1-peJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.92739850282669067" green="0.29619103670120239" blue="0.19936904311180115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99993699789047241" green="1" blue="0.99987250566482544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="y4c-Mn-RW0" kind="relationship" relationship="rootViewController" id="oLF-ko-9bW"/>
+                        <segue destination="igK-bJ-bW2" kind="relationship" relationship="rootViewController" id="ZdC-lZ-gz7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbp-Ms-gAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,7 +29,7 @@
         <!--Join Queue-->
         <scene sceneID="emW-T9-tnG">
             <objects>
-                <viewController id="LIx-MO-EhP" customClass="JoinQueueViewController" customModule="mokojin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LIx-MO-EhP" customClass="JoinQueueViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DZ4-OT-pwf"/>
                         <viewControllerLayoutGuide type="bottom" id="WP5-oI-rFn"/>
@@ -49,7 +50,10 @@
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="37i-wx-YU3">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.70143932104110718" green="0.75281906127929688" blue="0.78009778261184692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCellID" textLabel="ab7-l9-f9Q" style="IBUITableViewCellStyleDefault" id="EkO-rt-7UB">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -59,16 +63,18 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ab7-l9-f9Q">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="59U-PS-uPF" secondAttribute="trailing" id="7U1-qT-QQa"/>
                             <constraint firstItem="37i-wx-YU3" firstAttribute="leading" secondItem="59U-PS-uPF" secondAttribute="trailing" constant="-600" id="Bfn-Zu-cEU"/>
@@ -107,7 +113,7 @@
         <!--Select Characters View Controller-->
         <scene sceneID="X4h-9u-xzF">
             <objects>
-                <viewController id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="mokojin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LkG-Kh-PT7"/>
                         <viewControllerLayoutGuide type="bottom" id="Ln9-Vk-s8n"/>
@@ -126,14 +132,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCellID" id="7xK-HZ-Oam" customClass="CharacterCellView" customModule="mokojin" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCellID" id="7xK-HZ-Oam" customClass="CharacterCellView" customModule="Tekken_Time" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="CharacterView" customModule="mokojin" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="CharacterView" customModule="Tekken_Time" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="94" height="145"/>
                                                 </view>
                                             </subviews>
@@ -176,6 +182,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGc-qf-wst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="717" y="1101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kFI-BF-UfX">
+            <objects>
+                <viewController id="igK-bJ-bW2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZd-fi-p8f"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlK-jJ-vIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RVf-4c-ZTG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="imr-67-E8d">
+                                <rect key="frame" x="0.0" y="264" width="600" height="336"/>
+                                <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-W4-Mdg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.15472450852394104" green="0.19616436958312988" blue="0.22120565176010132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RaG-Fc-mdh"/>
+                                    <constraint firstAttribute="width" secondItem="Fvd-W4-Mdg" secondAttribute="height" multiplier="3:1" id="gmg-fi-c1i"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gmg-fi-c1i"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Fvd-W4-Mdg" secondAttribute="trailing" id="Kd8-6t-Pkf"/>
+                            <constraint firstItem="XlK-jJ-vIk" firstAttribute="top" secondItem="imr-67-E8d" secondAttribute="bottom" id="NIe-HQ-wDY"/>
+                            <constraint firstAttribute="trailing" secondItem="imr-67-E8d" secondAttribute="trailing" id="VHJ-Z8-Wen"/>
+                            <constraint firstItem="Fvd-W4-Mdg" firstAttribute="top" secondItem="rZd-fi-p8f" secondAttribute="bottom" id="c9I-JK-o5e"/>
+                            <constraint firstItem="imr-67-E8d" firstAttribute="top" secondItem="Fvd-W4-Mdg" secondAttribute="bottom" id="fCz-sm-wAj"/>
+                            <constraint firstItem="imr-67-E8d" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="qlw-Ef-aBr"/>
+                            <constraint firstItem="Fvd-W4-Mdg" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="s1M-P3-v9t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ia8-iB-TwJ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="la3-bR-G8N">
+                            <connections>
+                                <segue destination="y4c-Mn-RW0" kind="show" id="gCd-Cd-1lc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qlY-Lg-ttC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="LIx-MO-EhP" kind="show" id="u91-SE-UG1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1Y-rL-7AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="1127"/>
         </scene>
     </scenes>
 </document>
