@@ -20,10 +20,10 @@ import UIKit
         didSet {
             self.avatarView.isSelected = self.isSelected
             if self.isSelected {
-                self.nameView.textColor = Constants.sharedInstance.colors.lightTextColor
-                self.nameView.backgroundColor = Constants.sharedInstance.colors.primaryColor
+                self.nameView.textColor = Constants.Colors.lightTextColor
+                self.nameView.backgroundColor = Constants.Colors.primaryColor
             } else {
-                self.nameView.textColor = Constants.sharedInstance.colors.darkTextColor
+                self.nameView.textColor = Constants.Colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
             }
         }

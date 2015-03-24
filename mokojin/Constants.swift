@@ -9,19 +9,11 @@
 import Foundation
 import UIKit
 
-private let _constantsInstance = Constants()
-
-class Constants {
+struct Constants {
     
-    let colors = Colors()
-    
-    class var sharedInstance: Constants {
-        return _constantsInstance
-    }
-    
-    class Colors {
-        let primaryColor:UIColor = UIColor(red:0.917, green:0.258, blue:0.176, alpha:1)
-        let darkTextColor:UIColor = UIColor(red:0, green:0, blue:0, alpha:1)
-        let lightTextColor:UIColor = UIColor(red:1, green:1, blue:1, alpha:1)
+    struct Colors {
+        static let primaryColor:UIColor = UIColor(red:0.917, green:0.258, blue:0.176, alpha:1)
+        static let darkTextColor:UIColor = UIColor(red:0, green:0, blue:0, alpha:1)
+        static let lightTextColor:UIColor = UIColor(red:1, green:1, blue:1, alpha:1)
     }
 }
