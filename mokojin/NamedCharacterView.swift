@@ -20,14 +20,16 @@ class NamedCharacterView: UIXibView {
     
     var isSelected:Bool = false {
         didSet {
-            self.avatarView.hasBorder = self.isSelected
+            self.avatarView.setHasBorder(self.isSelected, animated: true) 
             if self.isSelected {
                 self.nameView.textColor = Constants.Colors.lightTextColor
                 self.nameView.backgroundColor = Constants.Colors.primaryColor
+                animateNameView()
             } else {
                 self.nameView.textColor = Constants.Colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
             }
+
         }
     }
     
@@ -36,6 +38,15 @@ class NamedCharacterView: UIXibView {
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func animateNameView(){
+        let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+        animation.toValue = NSValue(CGPoint: CGPointMake(0.8, 0.8))
+        animation.duration = 0.2
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.autoreverses = true
+        self.nameView.pop_addAnimation(animation, forKey: "spring")
     }
 
 }

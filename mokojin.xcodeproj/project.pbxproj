@@ -58,6 +58,7 @@
 		EDA704B21AC2E01E00DE4AED /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C981AC00E5D00243FC1 /* Character.swift */; };
 		EDA704B31AC2E01E00DE4AED /* QueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9A1AC00ED200243FC1 /* QueueItem.swift */; };
 		EDA704B41AC2E01E00DE4AED /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9C1AC00EF000243FC1 /* Match.swift */; };
+		EDA704B61AC2E80900DE4AED /* CurrentMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA704B51AC2E80900DE4AED /* CurrentMatchView.swift */; };
 		EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D11ABF305C00B2AC91 /* Person.swift */; };
 		EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +125,7 @@
 		ED605CB31AC0186C00243FC1 /* SetCharactersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCharactersOperation.swift; sourceTree = "<group>"; };
 		ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatioPresenter.swift; sourceTree = "<group>"; };
 		EDA704AB1AC2DFA400DE4AED /* RatioPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatioPresenterTests.swift; sourceTree = "<group>"; };
+		EDA704B51AC2E80900DE4AED /* CurrentMatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchView.swift; sourceTree = "<group>"; };
 		EDD2A2D11ABF305C00B2AC91 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 				ED37734C1AC1BCE300216F2B /* PlayerCharactersView */,
 				CA413D8E1AC0424F00BC5138 /* CharacterCellView.swift */,
 				ED3773461AC19A2500216F2B /* QueueItemCell.swift */,
+				EDA704B51AC2E80900DE4AED /* CurrentMatchView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				ED605C971AC00C1300243FC1 /* Player.swift in Sources */,
 				CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */,
 				EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */,
+				EDA704B61AC2E80900DE4AED /* CurrentMatchView.swift in Sources */,
 				ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */,
 				ED605CA81AC0152F00243FC1 /* CreatePersonOperation.swift in Sources */,
 				ED605CA51AC0137E00243FC1 /* SessionDataStore.swift in Sources */,
