@@ -13,11 +13,7 @@ import UIKit
 class AvatarView: UIImageView {
     
     @IBInspectable
-    var borderColor:UIColor = UIColor.clearColor() {
-        didSet{
-            self.layer.borderColor = self.borderColor.CGColor
-        }
-    }
+    var borderColor:UIColor = UIColor.clearColor()
     
     @IBInspectable
     var hasBorder:Bool = false
@@ -37,6 +33,7 @@ class AvatarView: UIImageView {
     private func updateCornerRadius(){
         self.clipsToBounds = true
         self.layer.cornerRadius = self.layer.frame.width / 2;
+        self.layer.borderColor = self.borderColor.CGColor
     }
     
     private func updateBorder(){

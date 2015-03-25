@@ -40,8 +40,8 @@ class PlayerCharactersView : UIXibView {
                     self.characterViewB.hidden = false
                     self.characterViewB.image = CharacterPresenter.image(character)
                     stickToLeftConstraint.priority = _highPriority
-                    self.characterViewA.hasBorder = direction.isMasking().right
-                    self.characterViewB.hasBorder = direction.isMasking().left
+                    self.characterViewA.setHasBorder(direction.isMasking().right, animated: false)
+                    self.characterViewB.setHasBorder(direction.isMasking().left, animated: false)
                 } else {
                     self.characterViewB.hidden = true
                     stickToLeftConstraint.priority = _lowPriority
