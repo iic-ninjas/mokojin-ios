@@ -286,7 +286,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKI-BK-jGP">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKI-BK-jGP" customClass="CurrentMatchView" customModule="mokojin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-cC-QSt" customClass="PlayerCharactersView" customModule="mokojin" customModuleProvider="target">
@@ -386,6 +386,14 @@
                                                 <exclude reference="4W4-df-uro"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <outlet property="playerA" destination="gb1-cC-QSt" id="4pA-aU-agI"/>
+                                            <outlet property="playerALabel" destination="dP6-9y-gY4" id="RiR-hK-U3Q"/>
+                                            <outlet property="playerB" destination="shp-wu-S05" id="t9S-xw-nLB"/>
+                                            <outlet property="playerBLabel" destination="zIE-Sf-Qiz" id="RvN-Oy-obJ"/>
+                                            <outlet property="ratioBar" destination="yFj-sh-hUq" id="QhB-zh-6rp"/>
+                                            <outlet property="ratioText" destination="x3r-9O-qla" id="TaF-0F-38z"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15472450852394104" green="0.19616436958312988" blue="0.22120565176010132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -428,12 +436,6 @@
                     <connections>
                         <outlet property="emptyView" destination="UHc-Ce-jkm" id="V0V-8S-qY9"/>
                         <outlet property="matchView" destination="EKI-BK-jGP" id="Imy-3J-HTa"/>
-                        <outlet property="playerA" destination="gb1-cC-QSt" id="nmJ-ge-7Kp"/>
-                        <outlet property="playerALabel" destination="dP6-9y-gY4" id="O8l-mn-77X"/>
-                        <outlet property="playerB" destination="shp-wu-S05" id="wnp-zY-VOJ"/>
-                        <outlet property="playerBLabel" destination="zIE-Sf-Qiz" id="3m8-jg-obr"/>
-                        <outlet property="ratioBar" destination="yFj-sh-hUq" id="fIb-hL-mpg"/>
-                        <outlet property="ratioText" destination="x3r-9O-qla" id="arc-Qr-3pl"/>
                         <outlet property="tableView" destination="imr-67-E8d" id="gya-zA-bsx"/>
                     </connections>
                 </viewController>

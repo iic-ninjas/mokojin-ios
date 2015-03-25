@@ -10,18 +10,12 @@ import Foundation
 
 class CurrentMatchViewController : NotificationListenerViewController {
     
-    @IBOutlet weak var playerA: PlayerCharactersView!
-    @IBOutlet weak var playerALabel: UILabel!
-    @IBOutlet weak var playerB: PlayerCharactersView!
-    @IBOutlet weak var playerBLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+
     
     @IBOutlet weak var emptyView: UILabel!
-    @IBOutlet weak var matchView: UIView!
+    @IBOutlet weak var matchView: CurrentMatchView!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var ratioBar: UIProgressView!
-    
-    @IBOutlet weak var ratioText: UILabel!
     var match:Match?
     
 
@@ -32,7 +26,7 @@ class CurrentMatchViewController : NotificationListenerViewController {
         let image = UIImage(named: "AppLogo")
         self.navigationItem.titleView = UIImageView(image: image)
         self.queueTableDelegate = QueueTableDelegate(tableView: self.tableView)
-        playerB.direction = .RightToLeft
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -59,14 +53,9 @@ class CurrentMatchViewController : NotificationListenerViewController {
     override func updateData() {
         if let match = SessionDataStore.sharedInstance.match {
             self.match = match
-            playerALabel.text = match.playerA.person.name
-            playerBLabel.text = match.playerB.person.name
-            playerA.player = match.playerA
-            playerB.player = match.playerB
             emptyView.hidden = true
+            matchView.match = match
             matchView.hidden = false
-            ratioBar.progress = Float(match.chanceToWin)
-            ratioText.text = RatioPresenter.ratioString(match)
         } else {
             emptyView.hidden = false
             matchView.hidden = true
@@ -74,7 +63,7 @@ class CurrentMatchViewController : NotificationListenerViewController {
     }
     
     func forceUpdate(){
-        SessionDataStore.sharedInstance.update()
+        SessionDataStore.sharedInstance.forceUpdate()
     }
     
     @IBAction func didLongTapPlayerA(sender: UILongPressGestureRecognizer) {

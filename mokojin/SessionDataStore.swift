@@ -28,7 +28,7 @@ class SessionDataStore {
         query()
     }
     
-    func update() -> SessionDataStore {
+    func forceUpdate() -> SessionDataStore {
         query()
         return self
     }

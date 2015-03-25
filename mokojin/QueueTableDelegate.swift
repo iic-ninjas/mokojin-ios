@@ -36,7 +36,7 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func forceUpdate(){
-        SessionDataStore.sharedInstance.update()
+        SessionDataStore.sharedInstance.forceUpdate()
     }
     
     func updateData(){
