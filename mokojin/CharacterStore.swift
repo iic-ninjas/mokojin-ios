@@ -26,7 +26,7 @@ class CharacterStore {
         query()
     }
     
-    func update() -> CharacterStore {
+    func forceUpdate() -> CharacterStore {
         query()
         return self
     }
