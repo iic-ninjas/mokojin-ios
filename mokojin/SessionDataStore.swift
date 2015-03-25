@@ -46,6 +46,10 @@ class SessionDataStore {
         
     }
     
+    func removeQueueItem(atIndex index:Int) {
+        self.queue.removeAtIndex(index)
+    }
+    
     func currentPlayingPeople() -> People {
         var people:People = queue.map { (queueItem:QueueItem) in
             queueItem.player.person
