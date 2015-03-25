@@ -1,3 +1,5 @@
 language: objective-c
 xcode_workspace: mokojin.xcworkspace # path to your xcodeproj folder
 xcode_scheme: mokojin
+script:
+- xctool clean build test -workspace mokojin.xcodeproj -scheme mokojin
