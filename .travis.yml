@@ -1,5 +1,10 @@
 language: objective-c
-xcode_workspace: mokojin.xcworkspace # path to your xcodeproj folder
-xcode_scheme: mokojin
+cache:
+  - bundler
+  - cocoapods
+
+before_install:
+  - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+
 script:
-- xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
+  - xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
