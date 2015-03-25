@@ -27,4 +27,8 @@ class Match : PFObject, PFSubclassing {
     @NSManaged var playerA: Player
     @NSManaged var playerB: Player
     
+    var chanceToWin:Double {
+        return expected
+    }
+    
 }

@@ -26,7 +26,7 @@ class PeopleStore {
         query()
     }
     
-    func update() -> PeopleStore {
+    func forceUpdate() -> PeopleStore {
         query()
         return self
     }

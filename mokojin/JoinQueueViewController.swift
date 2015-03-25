@@ -17,6 +17,8 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     var searchQuery:String = ""
     let notificationManager = NotificationManager()
     
+    @IBOutlet weak var emptyView: UILabel!
+    
     override init() {
         super.init()
         self.listenOnEvents()
@@ -50,11 +52,13 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     
     
     private func updateData(){
-        let allPeople = PeopleStore.sharedInstance.update().people
+        let allPeople = PeopleStore.sharedInstance.people
         let playingPeople = SessionDataStore.sharedInstance.currentPlayingPeople()
         self.people = allPeople.filter {
             !contains(playingPeople, $0)
         }
+        emptyView.hidden = !self.people.isEmpty
+        tableView.hidden = self.people.isEmpty
         tableView.reloadData()
     }
     
@@ -110,6 +114,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         ProgressHUD.show("Creating new user")
         let name = self.searchQuery
         CreatePersonOperation().run(name, callback: { (raw, err) -> Void in
+            PeopleStore.sharedInstance.forceUpdate()
             if let person = raw as? Person {
                 self.addExistingPerson(person)
             } else {
@@ -123,12 +128,11 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         JoinQueueOperation().run(person, callback: { (result, err) -> Void in
             ProgressHUD.dismiss()
             self.done()
-        })
-        
+        })    
     }
     
     private func done(){
-        
+        self.performSegueWithIdentifier("unwindToCurrentMatch", sender: self)
     }
     
     private func personAtIndex(tableView: UITableView, indexPath: NSIndexPath) -> Person {

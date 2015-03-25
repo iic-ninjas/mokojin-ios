@@ -23,5 +23,4 @@ class Character : PFObject, PFSubclassing {
     
     @NSManaged var name: String
     @NSManaged var characterId: Int
-    
 }

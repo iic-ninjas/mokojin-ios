@@ -9,54 +9,44 @@
 import Foundation
 import UIKit
 
-class NamedCharacterView: UIView {
+class NamedCharacterView: UIXibView {
     var character:Character = Character() {
         didSet {
-            setup()
+            let presenter = CharacterPresenter(character: self.character)
+            self.nameView.text = presenter.displayName()
+            self.avatarView.image = presenter.image()
         }
     }
     
     var isSelected:Bool = false {
         didSet {
-            self.avatarView.isSelected = self.isSelected
+            self.avatarView.setHasBorder(self.isSelected, animated: true) 
             if self.isSelected {
                 self.nameView.textColor = Constants.Colors.lightTextColor
                 self.nameView.backgroundColor = Constants.Colors.primaryColor
+                animateNameView()
             } else {
                 self.nameView.textColor = Constants.Colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
             }
+
         }
     }
     
     @IBOutlet weak var avatarView: AvatarView!
     @IBOutlet weak var nameView: UILabel!
-    
-    private var loadedXib: Bool = false
-
-    init(character: Character) {
-        super.init()
-        self.character = character
-        setup()
-    }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    func animateNameView(){
+        let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+        animation.toValue = NSValue(CGPoint: CGPointMake(0.8, 0.8))
+        animation.duration = 0.2
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.autoreverses = true
+        self.nameView.pop_addAnimation(animation, forKey: "spring")
     }
-    
-    private func setup() {
-        if !self.loadedXib {
-            let view = NSBundle.mainBundle().loadNibNamed("NamedCharacterView", owner: self, options: nil).first as UIView
-            view.frame = self.bounds
-            self.addSubview(view)
-            self.loadedXib = true
-        }
-        let presenter = CharacterPresenter(character: self.character)
-        self.nameView.text = presenter.displayName()
-        self.avatarView.image = presenter.image()
-    }
+
 }

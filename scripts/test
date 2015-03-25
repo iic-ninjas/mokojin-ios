@@ -1,0 +1,1 @@
+set -o pipefail && xcodebuild -workspace mokojin.xcworkspace -scheme mokojin -configuration Debug test -sdk iphonesimulator | xcpretty -c --test

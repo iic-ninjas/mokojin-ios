@@ -28,6 +28,11 @@ class SessionDataStore {
         query()
     }
     
+    func forceUpdate() -> SessionDataStore {
+        query()
+        return self
+    }
+    
     private func query(){
         loaded = false
         getter.get {
@@ -39,6 +44,10 @@ class SessionDataStore {
             NSNotificationCenter.defaultCenter().postNotificationName(SessionDataStoreNotificationName, object: nil)
         }
         
+    }
+    
+    func removeQueueItem(atIndex index:Int) {
+        self.queue.removeAtIndex(index)
     }
     
     func currentPlayingPeople() -> People {

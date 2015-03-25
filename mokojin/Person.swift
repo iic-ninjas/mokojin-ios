@@ -25,5 +25,5 @@ class Person : PFObject, PFSubclassing {
     
     @NSManaged var name: String
     @NSManaged var rank: Double
-
+    
 }

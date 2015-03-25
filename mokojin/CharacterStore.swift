@@ -26,6 +26,11 @@ class CharacterStore {
         query()
     }
     
+    func forceUpdate() -> CharacterStore {
+        query()
+        return self
+    }
+    
     private func query(){
         loaded = false
         getter.get {
