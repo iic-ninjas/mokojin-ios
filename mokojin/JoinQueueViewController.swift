@@ -50,7 +50,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     
     
     private func updateData(){
-        let allPeople = PeopleStore.sharedInstance.update().people
+        let allPeople = PeopleStore.sharedInstance.people
         let playingPeople = SessionDataStore.sharedInstance.currentPlayingPeople()
         self.people = allPeople.filter {
             !contains(playingPeople, $0)
@@ -110,6 +110,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         ProgressHUD.show("Creating new user")
         let name = self.searchQuery
         CreatePersonOperation().run(name, callback: { (raw, err) -> Void in
+            PeopleStore.sharedInstance.forceUpdate()
             if let person = raw as? Person {
                 self.addExistingPerson(person)
             } else {
