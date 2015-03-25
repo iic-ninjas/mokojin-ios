@@ -29,7 +29,7 @@
         <!--Join Queue-->
         <scene sceneID="emW-T9-tnG">
             <objects>
-                <viewController id="LIx-MO-EhP" customClass="JoinQueueViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LIx-MO-EhP" customClass="JoinQueueViewController" customModule="mokojin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DZ4-OT-pwf"/>
                         <viewControllerLayoutGuide type="bottom" id="WP5-oI-rFn"/>
@@ -126,7 +126,7 @@
         <!--Choose Character-->
         <scene sceneID="X4h-9u-xzF">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="y4c-Mn-RW0" customClass="SelectCharactersViewController" customModule="mokojin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LkG-Kh-PT7"/>
                         <viewControllerLayoutGuide type="bottom" id="Ln9-Vk-s8n"/>
@@ -145,14 +145,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCellID" id="7xK-HZ-Oam" customClass="CharacterCellView" customModule="Tekken_Time" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCellID" id="7xK-HZ-Oam" customClass="CharacterCellView" customModule="mokojin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="NamedCharacterView" customModule="Tekken_Time" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWt-Al-RS1" customClass="NamedCharacterView" customModule="mokojin" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="94" height="117"/>
                                                 </view>
                                             </subviews>
@@ -214,7 +214,7 @@
         <!--Current Match View Controller-->
         <scene sceneID="kFI-BF-UfX">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="igK-bJ-bW2" customClass="CurrentMatchViewController" customModule="Tekken_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="igK-bJ-bW2" customClass="CurrentMatchViewController" customModule="mokojin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rZd-fi-p8f"/>
                         <viewControllerLayoutGuide type="bottom" id="XlK-jJ-vIk"/>
@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="284" width="600" height="316"/>
                                 <color key="backgroundColor" red="0.81548494100570679" green="0.84716659784317017" blue="0.86386990547180176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QueueItemCellID" rowHeight="61" id="E9o-lc-77o" customClass="QueueItemCell" customModule="Tekken_Time" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QueueItemCellID" rowHeight="61" id="E9o-lc-77o" customClass="QueueItemCell" customModule="mokojin" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9o-lc-77o" id="Tea-8Y-3S9">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -235,7 +235,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-qN-FLk">
                                                     <rect key="frame" x="100" y="17" width="105" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayn-64-OwO">
@@ -244,7 +244,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.57999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9U-ha-dSM" customClass="PlayerCharactersView" customModule="Tekken_Time" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9U-ha-dSM" customClass="PlayerCharactersView" customModule="mokojin" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="6" width="66" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -289,7 +289,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKI-BK-jGP">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-cC-QSt" customClass="PlayerCharactersView" customModule="Tekken_Time" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb1-cC-QSt" customClass="PlayerCharactersView" customModule="mokojin" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="20" width="60" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
@@ -307,8 +307,8 @@
                                                     <outletCollection property="gestureRecognizers" destination="bEG-Zb-S92" appends="YES" id="uIt-hE-het"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shp-wu-S05" customClass="PlayerCharactersView" customModule="Tekken_Time" customModuleProvider="target">
-                                                <rect key="frame" x="521" y="20" width="60" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shp-wu-S05" customClass="PlayerCharactersView" customModule="mokojin" customModuleProvider="target">
+                                                <rect key="frame" x="520" y="20" width="60" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -326,19 +326,19 @@
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayerB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIE-Sf-Qiz">
-                                                <rect key="frame" x="521" y="72" width="60" height="21"/>
+                                                <rect key="frame" x="520" y="72" width="60" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFP-Bx-gNI">
-                                                <rect key="frame" x="287" y="69" width="28" height="27"/>
+                                                <rect key="frame" x="286" y="69" width="28" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yFj-sh-hUq">
-                                                <rect key="frame" x="20" y="107" width="560" height="7"/>
+                                                <rect key="frame" x="20" y="108" width="560" height="7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="6" id="O3z-jd-9WU"/>
                                                 </constraints>
@@ -346,7 +346,7 @@
                                                 <color key="trackTintColor" red="0.35333830118179321" green="0.68706536293029785" blue="0.28198841214179993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3r-9O-qla">
-                                                <rect key="frame" x="289" y="118" width="23" height="20"/>
+                                                <rect key="frame" x="289" y="119" width="23" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -460,23 +460,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="252" y="343"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LxR-Ey-vZn">
-            <objects>
-                <viewController id="dyv-w9-07P" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="R1a-b2-m9J"/>
-                        <viewControllerLayoutGuide type="bottom" id="nBa-UF-HmG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ihh-t5-ZUC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8e7-cQ-OiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>
