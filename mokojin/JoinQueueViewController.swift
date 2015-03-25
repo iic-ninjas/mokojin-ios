@@ -17,6 +17,8 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     var searchQuery:String = ""
     let notificationManager = NotificationManager()
     
+    @IBOutlet weak var emptyView: UILabel!
+    
     override init() {
         super.init()
         self.listenOnEvents()
@@ -55,6 +57,8 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
         self.people = allPeople.filter {
             !contains(playingPeople, $0)
         }
+        emptyView.hidden = !self.people.isEmpty
+        tableView.hidden = self.people.isEmpty
         tableView.reloadData()
     }
     

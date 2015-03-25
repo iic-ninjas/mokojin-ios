@@ -19,8 +19,12 @@ class CurrentMatchViewController : NotificationListenerViewController {
     @IBOutlet weak var emptyView: UILabel!
     @IBOutlet weak var matchView: UIView!
     
+    @IBOutlet weak var ratioBar: UIProgressView!
+    
+    @IBOutlet weak var ratioText: UILabel!
     var match:Match?
     
+
     var queueTableDelegate:QueueTableDelegate?
     
     override func viewDidLoad() {
@@ -61,6 +65,8 @@ class CurrentMatchViewController : NotificationListenerViewController {
             playerB.player = match.playerB
             emptyView.hidden = true
             matchView.hidden = false
+            ratioBar.progress = Float(match.chanceToWin)
+            ratioText.text = RatioPresenter.ratioString(match)
         } else {
             emptyView.hidden = false
             matchView.hidden = true

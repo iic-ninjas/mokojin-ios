@@ -48,6 +48,7 @@
 		ED605CB01AC017F100243FC1 /* JoinQueueOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CAF1AC017F100243FC1 /* JoinQueueOperation.swift */; };
 		ED605CB21AC0183000243FC1 /* LeaveQueueOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CB11AC0183000243FC1 /* LeaveQueueOperation.swift */; };
 		ED605CB41AC0186C00243FC1 /* SetCharactersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CB31AC0186C00243FC1 /* SetCharactersOperation.swift */; };
+		ED83475B1AC2AF1B001CCE09 /* RatioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */; };
 		EDD2A2D21ABF305C00B2AC91 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D11ABF305C00B2AC91 /* Person.swift */; };
 		EDD2A2D51ABF311B00B2AC91 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		ED605CAF1AC017F100243FC1 /* JoinQueueOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueOperation.swift; sourceTree = "<group>"; };
 		ED605CB11AC0183000243FC1 /* LeaveQueueOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveQueueOperation.swift; sourceTree = "<group>"; };
 		ED605CB31AC0186C00243FC1 /* SetCharactersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCharactersOperation.swift; sourceTree = "<group>"; };
+		ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatioPresenter.swift; sourceTree = "<group>"; };
 		EDD2A2D11ABF305C00B2AC91 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 			children = (
 				CA4832781AC1914700862CC3 /* CharacterPresenter.swift */,
 				ED3773481AC1A1AE00216F2B /* QueuePresenter.swift */,
+				ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */,
 			);
 			name = presenters;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				ED605CAE1AC0178400243FC1 /* InvitePlayersOperation.swift in Sources */,
 				ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */,
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
+				ED83475B1AC2AF1B001CCE09 /* RatioPresenter.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
 				CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */,
