@@ -8,5 +8,5 @@ target 'mokojin' do
 end
 
 target 'mokojinTests' do
-
+  pod 'Parse', '~> 1.6'
 end
