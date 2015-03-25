@@ -48,6 +48,9 @@
 		ED605CB01AC017F100243FC1 /* JoinQueueOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CAF1AC017F100243FC1 /* JoinQueueOperation.swift */; };
 		ED605CB21AC0183000243FC1 /* LeaveQueueOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CB11AC0183000243FC1 /* LeaveQueueOperation.swift */; };
 		ED605CB41AC0186C00243FC1 /* SetCharactersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605CB31AC0186C00243FC1 /* SetCharactersOperation.swift */; };
+		ED61B0F31AC309A5008A3E5F /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61B0F21AC309A5008A3E5F /* PersonTest.swift */; };
+		ED61B0F51AC30B93008A3E5F /* PFObject+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61B0F41AC30B93008A3E5F /* PFObject+Equality.swift */; };
+		ED61B0F61AC30E59008A3E5F /* PFObject+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED61B0F41AC30B93008A3E5F /* PFObject+Equality.swift */; };
 		ED83475B1AC2AF1B001CCE09 /* RatioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */; };
 		EDA704AC1AC2DFA400DE4AED /* RatioPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA704AB1AC2DFA400DE4AED /* RatioPresenterTests.swift */; };
 		EDA704AD1AC2E01800DE4AED /* CharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832781AC1914700862CC3 /* CharacterPresenter.swift */; };
@@ -123,6 +126,8 @@
 		ED605CAF1AC017F100243FC1 /* JoinQueueOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueOperation.swift; sourceTree = "<group>"; };
 		ED605CB11AC0183000243FC1 /* LeaveQueueOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveQueueOperation.swift; sourceTree = "<group>"; };
 		ED605CB31AC0186C00243FC1 /* SetCharactersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCharactersOperation.swift; sourceTree = "<group>"; };
+		ED61B0F21AC309A5008A3E5F /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
+		ED61B0F41AC30B93008A3E5F /* PFObject+Equality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFObject+Equality.swift"; sourceTree = "<group>"; };
 		ED83475A1AC2AF1B001CCE09 /* RatioPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatioPresenter.swift; sourceTree = "<group>"; };
 		EDA704AB1AC2DFA400DE4AED /* RatioPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatioPresenterTests.swift; sourceTree = "<group>"; };
 		EDA704B51AC2E80900DE4AED /* CurrentMatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchView.swift; sourceTree = "<group>"; };
@@ -255,6 +260,7 @@
 			children = (
 				EDA704AA1AC2DF9400DE4AED /* presenters */,
 				ED1CDAA71ABF1BEE00F52413 /* Supporting Files */,
+				ED61B0F21AC309A5008A3E5F /* PersonTest.swift */,
 			);
 			path = mokojinTests;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 				ED605C981AC00E5D00243FC1 /* Character.swift */,
 				ED605C9A1AC00ED200243FC1 /* QueueItem.swift */,
 				ED605C9C1AC00EF000243FC1 /* Match.swift */,
+				ED61B0F41AC30B93008A3E5F /* PFObject+Equality.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -541,6 +548,7 @@
 				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
 				ED83475B1AC2AF1B001CCE09 /* RatioPresenter.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
+				ED61B0F51AC30B93008A3E5F /* PFObject+Equality.swift in Sources */,
 				ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */,
 				CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */,
 				ED37734B1AC1B8B800216F2B /* PlayerCharactersView.swift in Sources */,
@@ -584,7 +592,9 @@
 				EDA704AD1AC2E01800DE4AED /* CharacterPresenter.swift in Sources */,
 				EDA704B11AC2E01E00DE4AED /* Player.swift in Sources */,
 				EDA704AC1AC2DFA400DE4AED /* RatioPresenterTests.swift in Sources */,
+				ED61B0F61AC30E59008A3E5F /* PFObject+Equality.swift in Sources */,
 				EDA704B31AC2E01E00DE4AED /* QueueItem.swift in Sources */,
+				ED61B0F31AC309A5008A3E5F /* PersonTest.swift in Sources */,
 				EDA704B21AC2E01E00DE4AED /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

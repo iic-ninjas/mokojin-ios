@@ -11,7 +11,7 @@ import Parse
 
 typealias People = [Person]
 
-class Person : PFObject, PFSubclassing, Hashable {
+class Person : PFObject, PFSubclassing {
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
         dispatch_once(&onceToken) {
@@ -26,20 +26,4 @@ class Person : PFObject, PFSubclassing, Hashable {
     @NSManaged var name: String
     @NSManaged var rank: Double
     
-    override var hashValue: Int {
-        return self.objectId.hashValue
-    }
-
-}
-
-func == (this: Person, that: Person) -> Bool {
-    return this.objectId == that.objectId
-}
-
-func == (this: Person?, that: Person) -> Bool {
-    if let unwrappedThis = this {
-        return unwrappedThis == that
-    } else {
-        return false;
-    }
 }
