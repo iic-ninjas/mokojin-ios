@@ -7,4 +7,5 @@ before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
 
 script:
-  - xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
+  # - xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
+  - set -o pipefail && xcodebuild -workspace mokojin.xcworkspace -scheme mokojin -configuration Debug test -sdk iphonesimulator | xcpretty -c --test
