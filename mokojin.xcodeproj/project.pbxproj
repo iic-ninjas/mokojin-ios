@@ -76,7 +76,7 @@
 		CA413D911AC04DAE00BC5138 /* NamedCharacterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NamedCharacterView.xib; sourceTree = "<group>"; };
 		CA4832751AC180AE00862CC3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CA4832781AC1914700862CC3 /* CharacterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
-		ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tekken Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED1CDA981ABF1BEE00F52413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		ED1CDA8F1ABF1BEE00F52413 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */,
+				ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */,
 				ED1CDAA31ABF1BEE00F52413 /* mokojinTests.xctest */,
 			);
 			name = Products;
@@ -354,7 +354,7 @@
 			);
 			name = mokojin;
 			productName = mokojin;
-			productReference = ED1CDA8E1ABF1BEE00F52413 /* Tekken Time.app */;
+			productReference = ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ED1CDAA21ABF1BEE00F52413 /* mokojinTests */ = {
@@ -386,6 +386,7 @@
 				TargetAttributes = {
 					ED1CDA8D1ABF1BEE00F52413 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = C548T5A96A;
 					};
 					ED1CDAA21ABF1BEE00F52413 = {
 						CreatedOnToolsVersion = 6.2;
@@ -634,10 +635,11 @@
 			baseConfigurationReference = B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Tekken Time";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_OBJC_BRIDGING_HEADER = "mokojin/Obj-C-Bridge.h";
 			};
 			name = Debug;
@@ -647,10 +649,11 @@
 			baseConfigurationReference = 609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "Tekken Time";
+				PRODUCT_NAME = "${TARGET_NAME}";
 				SWIFT_OBJC_BRIDGING_HEADER = "mokojin/Obj-C-Bridge.h";
 			};
 			name = Release;

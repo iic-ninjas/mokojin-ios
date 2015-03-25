@@ -33,7 +33,6 @@ class UIXibView : UIView {
             } else {
                 _customView.frame = self.bounds
                 _customView.setTranslatesAutoresizingMaskIntoConstraints(false)
-                
             }
 
             self.addSubview(_customView)
