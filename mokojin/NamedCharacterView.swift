@@ -20,11 +20,11 @@ class NamedCharacterView: UIXibView {
     
     var isSelected:Bool = false {
         didSet {
-            self.avatarView.setHasBorder(self.isSelected, animated: true) 
+            self.avatarView.setHasBorder(self.isSelected, animated: true)
+            animateNameView()
             if self.isSelected {
                 self.nameView.textColor = Constants.Colors.lightTextColor
                 self.nameView.backgroundColor = Constants.Colors.primaryColor
-                animateNameView()
             } else {
                 self.nameView.textColor = Constants.Colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
@@ -42,6 +42,7 @@ class NamedCharacterView: UIXibView {
     
     func animateNameView(){
         let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+        animation.fromValue = NSValue(CGPoint: CGPointMake(1, 1))
         animation.toValue = NSValue(CGPoint: CGPointMake(0.8, 0.8))
         animation.duration = 0.2
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
