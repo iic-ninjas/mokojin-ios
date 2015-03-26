@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(nil, block: nil)
         initModels()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        Fabric.with([Crashlytics()])
         return true
     }
     

@@ -22,6 +22,8 @@
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
 		ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */; };
 		ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */; };
+		ED1D343A1AC431AE003463EB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1D34381AC431AE003463EB /* Crashlytics.framework */; };
+		ED1D343B1AC431AE003463EB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1D34391AC431AE003463EB /* Fabric.framework */; };
 		ED338B851AC056720095FF7E /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED338B841AC056720095FF7E /* ProgressHUD.swift */; };
 		ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773441AC1867000216F2B /* QueueTableDelegate.swift */; };
 		ED3773471AC19A2500216F2B /* QueueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3773461AC19A2500216F2B /* QueueItemCell.swift */; };
@@ -100,6 +102,8 @@
 		ED1CDA9D1ABF1BEE00F52413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ED1CDAA31ABF1BEE00F52413 /* mokojinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mokojinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDAA81ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED1D34381AC431AE003463EB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		ED1D34391AC431AE003463EB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		ED338B841AC056720095FF7E /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		ED3773441AC1867000216F2B /* QueueTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTableDelegate.swift; sourceTree = "<group>"; };
 		ED3773461AC19A2500216F2B /* QueueItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItemCell.swift; sourceTree = "<group>"; };
@@ -140,7 +144,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1D343A1AC431AE003463EB /* Crashlytics.framework in Frameworks */,
 				E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */,
+				ED1D343B1AC431AE003463EB /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +216,8 @@
 		ED1CDA851ABF1BEE00F52413 = {
 			isa = PBXGroup;
 			children = (
+				ED1D34381AC431AE003463EB /* Crashlytics.framework */,
+				ED1D34391AC431AE003463EB /* Fabric.framework */,
 				ED1CDA901ABF1BEE00F52413 /* mokojin */,
 				ED1CDAA61ABF1BEE00F52413 /* mokojinTests */,
 				ED1CDA8F1ABF1BEE00F52413 /* Products */,
@@ -381,6 +389,7 @@
 				ED1CDA8B1ABF1BEE00F52413 /* Frameworks */,
 				ED1CDA8C1ABF1BEE00F52413 /* Resources */,
 				9488AC40B15DEAE68FF46044 /* Copy Pods Resources */,
+				ED4093EC1AC43091009F32F0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -422,7 +431,7 @@
 				TargetAttributes = {
 					ED1CDA8D1ABF1BEE00F52413 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = C548T5A96A;
+						DevelopmentTeam = B233M45L7E;
 					};
 					ED1CDAA21ABF1BEE00F52413 = {
 						CreatedOnToolsVersion = 6.2;
@@ -532,6 +541,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mokojin/Pods-mokojin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		ED4093EC1AC43091009F32F0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b9c02c48f0bdc33eccff6324c171ef47bf42501e 97ee0fd4441f40e7a8a20fa84002d8983e118dcf0d34c1fdc2f711afb3255aeb";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -715,6 +737,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -731,6 +757,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = mokojin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
