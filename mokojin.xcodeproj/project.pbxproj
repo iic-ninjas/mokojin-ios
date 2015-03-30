@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */; };
-		5B7733BAA3151AFBDAEFD8ED /* libPods-mokojinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D1AB9190FEAC9F96087545 /* libPods-mokojinTests.a */; };
+		84F7F280299DE8798315E3FB /* Pods_mokojinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA0E49A559FB7CFD89F6DD9 /* Pods_mokojinTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D861AC01AD800BC5138 /* AvatarView.swift */; };
 		CA413D891AC036A600BC5138 /* NamedCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D881AC036A600BC5138 /* NamedCharacterView.swift */; };
 		CA413D8B1AC0392C00BC5138 /* NotificationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */; };
@@ -18,6 +18,10 @@
 		CA4832761AC180AE00862CC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832751AC180AE00862CC3 /* Constants.swift */; };
 		CA4832791AC1914700862CC3 /* CharacterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4832781AC1914700862CC3 /* CharacterPresenter.swift */; };
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
+		ED08F9621AC44CCF006F2314 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
+		ED08F9631AC44D55006F2314 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
+		ED08F9641AC455D1006F2314 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
+		ED08F9661AC45992006F2314 /* QuickConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08F9651AC45992006F2314 /* QuickConfiguration.swift */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
 		ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */; };
@@ -31,6 +35,7 @@
 		ED37734B1AC1B8B800216F2B /* PlayerCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37734A1AC1B8B800216F2B /* PlayerCharactersView.swift */; };
 		ED37734E1AC1BDC600216F2B /* UIXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED37734D1AC1BDC600216F2B /* UIXibView.swift */; };
 		ED3773501AC1C2D500216F2B /* PlayerCharactersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED37734F1AC1C2D500216F2B /* PlayerCharactersView.xib */; };
+		ED38EA2F1AC44A8200A534F5 /* PeopleStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED38EA2E1AC44A8200A534F5 /* PeopleStoreSpec.swift */; };
 		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
@@ -84,7 +89,7 @@
 		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
 		98D95A63D53751B2AD266CAE /* Pods-mokojinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojinTests/Pods-mokojinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B863B02A9B3F6DF8520A1838 /* Pods-mokojin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.debug.xcconfig"; sourceTree = "<group>"; };
-		C4D1AB9190FEAC9F96087545 /* libPods-mokojinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAA0E49A559FB7CFD89F6DD9 /* Pods_mokojinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mokojinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA413D861AC01AD800BC5138 /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		CA413D881AC036A600BC5138 /* NamedCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedCharacterView.swift; sourceTree = "<group>"; };
 		CA413D8A1AC0392C00BC5138 /* NotificationListenerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationListenerViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 		CA4832751AC180AE00862CC3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CA4832781AC1914700862CC3 /* CharacterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
 		DE33C716671C23A203BFBCD4 /* Pods-mokojinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojinTests/Pods-mokojinTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED08F9651AC45992006F2314 /* QuickConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickConfiguration.swift; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		ED37734A1AC1B8B800216F2B /* PlayerCharactersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCharactersView.swift; sourceTree = "<group>"; };
 		ED37734D1AC1BDC600216F2B /* UIXibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIXibView.swift; sourceTree = "<group>"; };
 		ED37734F1AC1C2D500216F2B /* PlayerCharactersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerCharactersView.xib; sourceTree = "<group>"; };
+		ED38EA2E1AC44A8200A534F5 /* PeopleStoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleStoreSpec.swift; sourceTree = "<group>"; };
 		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7733BAA3151AFBDAEFD8ED /* libPods-mokojinTests.a in Frameworks */,
+				84F7F280299DE8798315E3FB /* Pods_mokojinTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */,
-				C4D1AB9190FEAC9F96087545 /* libPods-mokojinTests.a */,
+				ED1D34381AC431AE003463EB /* Crashlytics.framework */,
+				ED1D34391AC431AE003463EB /* Fabric.framework */,
+				BAA0E49A559FB7CFD89F6DD9 /* Pods_mokojinTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,8 +225,6 @@
 		ED1CDA851ABF1BEE00F52413 = {
 			isa = PBXGroup;
 			children = (
-				ED1D34381AC431AE003463EB /* Crashlytics.framework */,
-				ED1D34391AC431AE003463EB /* Fabric.framework */,
 				ED1CDA901ABF1BEE00F52413 /* mokojin */,
 				ED1CDAA61ABF1BEE00F52413 /* mokojinTests */,
 				ED1CDA8F1ABF1BEE00F52413 /* Products */,
@@ -269,6 +276,8 @@
 				EDA704AA1AC2DF9400DE4AED /* presenters */,
 				ED1CDAA71ABF1BEE00F52413 /* Supporting Files */,
 				ED61B0F21AC309A5008A3E5F /* PersonTest.swift */,
+				ED38EA2E1AC44A8200A534F5 /* PeopleStoreSpec.swift */,
+				ED08F9651AC45992006F2314 /* QuickConfiguration.swift */,
 			);
 			path = mokojinTests;
 			sourceTree = "<group>";
@@ -409,6 +418,7 @@
 				ED1CDAA01ABF1BEE00F52413 /* Frameworks */,
 				ED1CDAA11ABF1BEE00F52413 /* Resources */,
 				436F678D6FA901C404D3AFA6 /* Copy Pods Resources */,
+				A97D2FAE1C480F522A95EBEC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,6 +552,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mokojin/Pods-mokojin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A97D2FAE1C480F522A95EBEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mokojinTests/Pods-mokojinTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ED4093EC1AC43091009F32F0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,14 +635,19 @@
 				EDA704B01AC2E01E00DE4AED /* Person.swift in Sources */,
 				EDA704AF1AC2E01800DE4AED /* RatioPresenter.swift in Sources */,
 				EDA704AE1AC2E01800DE4AED /* QueuePresenter.swift in Sources */,
+				ED08F9631AC44D55006F2314 /* GetPeople.swift in Sources */,
 				EDA704B41AC2E01E00DE4AED /* Match.swift in Sources */,
 				EDA704AD1AC2E01800DE4AED /* CharacterPresenter.swift in Sources */,
 				EDA704B11AC2E01E00DE4AED /* Player.swift in Sources */,
+				ED38EA2F1AC44A8200A534F5 /* PeopleStoreSpec.swift in Sources */,
+				ED08F9661AC45992006F2314 /* QuickConfiguration.swift in Sources */,
 				EDA704AC1AC2DFA400DE4AED /* RatioPresenterTests.swift in Sources */,
 				ED61B0F61AC30E59008A3E5F /* PFObject+Equality.swift in Sources */,
 				EDA704B31AC2E01E00DE4AED /* QueueItem.swift in Sources */,
 				ED61B0F31AC309A5008A3E5F /* PersonTest.swift in Sources */,
+				ED08F9641AC455D1006F2314 /* NotificationManager.swift in Sources */,
 				EDA704B21AC2E01E00DE4AED /* Character.swift in Sources */,
+				ED08F9621AC44CCF006F2314 /* PeopleStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

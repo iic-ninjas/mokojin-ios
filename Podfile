@@ -9,5 +9,8 @@ target 'mokojin' do
 end
 
 target 'mokojinTests' do
+  use_frameworks!
   pod 'Parse', '~> 1.6'
+  pod 'quick', '~> 0.2.2'
+  pod 'nimble', '~> 0.3.1'
 end

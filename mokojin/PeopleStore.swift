@@ -18,11 +18,12 @@ class PeopleStore {
         return _PeopleStoreInstance
     }
 
-    let getter = GetPeople()
+    let getter:GetPeople
     var people:People = []
     var loaded = false
     
-    private init(){
+    internal init(getter:GetPeople = GetPeople()){
+        self.getter = getter
         query()
     }
     

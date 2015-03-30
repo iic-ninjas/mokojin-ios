@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +16,6 @@
                BlueprintIdentifier = "ED1CDA8D1ABF1BEE00F52413"
                BuildableName = "mokojin.app"
                BlueprintName = "mokojin"
-               ReferencedContainer = "container:mokojin.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED1CDAA21ABF1BEE00F52413"
-               BuildableName = "mokojinTests.xctest"
-               BlueprintName = "mokojinTests"
                ReferencedContainer = "container:mokojin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -91,8 +76,7 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED1CDA8D1ABF1BEE00F52413"
@@ -100,7 +84,7 @@
             BlueprintName = "mokojin"
             ReferencedContainer = "container:mokojin.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
