@@ -55,5 +55,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cocoapods
+  cocoapods (= 0.36.0)
   xcpretty
