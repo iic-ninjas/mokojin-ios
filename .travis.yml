@@ -5,6 +5,7 @@ cache:
 
 before_install:
   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+  - gem install cocoapods -v '0.36.0'
 
 script:
   # - xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
