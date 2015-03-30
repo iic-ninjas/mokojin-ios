@@ -100,6 +100,7 @@
 		CA4832781AC1914700862CC3 /* CharacterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterPresenter.swift; sourceTree = "<group>"; };
 		DE33C716671C23A203BFBCD4 /* Pods-mokojinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojinTests/Pods-mokojinTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED08F9651AC45992006F2314 /* QuickConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickConfiguration.swift; sourceTree = "<group>"; };
+		ED1C79411AC95871008FC01A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -666,6 +667,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED1CDA981ABF1BEE00F52413 /* Base */,
+				ED1C79411AC95871008FC01A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

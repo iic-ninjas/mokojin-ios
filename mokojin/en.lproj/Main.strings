@@ -1,0 +1,36 @@
+
+/* Class = "UISearchBar"; placeholder = "Enter Player Name"; ObjectID = "59U-PS-uPF"; */
+"59U-PS-uPF.placeholder" = "Enter Player Name";
+
+/* Class = "UINavigationItem"; title = "Choose Character"; ObjectID = "6oV-ZR-xMk"; */
+"6oV-ZR-xMk.title" = "Select Character";
+
+/* Class = "UILabel"; text = "Person Name"; ObjectID = "DUa-qN-FLk"; */
+"DUa-qN-FLk.text" = "Person Name";
+
+/* Class = "UINavigationItem"; title = "Join Queue"; ObjectID = "Dlb-Bi-pYO"; */
+"Dlb-Bi-pYO.title" = "Add Player";
+
+/* Class = "UILabel"; text = "No Match"; ObjectID = "UHc-Ce-jkm"; */
+"UHc-Ce-jkm.text" = "No ongoing matches";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ab7-l9-f9Q"; */
+"ab7-l9-f9Q.text" = "Title";
+
+/* Class = "UILabel"; text = "3:24"; ObjectID = "ayn-64-OwO"; */
+"ayn-64-OwO.text" = "3:24";
+
+/* Class = "UILabel"; text = "VS"; ObjectID = "cFP-Bx-gNI"; */
+"cFP-Bx-gNI.text" = "VS";
+
+/* Class = "UILabel"; text = "PlayerA"; ObjectID = "dP6-9y-gY4"; */
+"dP6-9y-gY4.text" = "PlayerA";
+
+/* Class = "UILabel"; text = "No more people waiting to play, type to add a new player"; ObjectID = "niZ-Bc-9m4"; */
+"niZ-Bc-9m4.text" = "No more people waiting to play, type to add a new player";
+
+/* Class = "UILabel"; text = "1:1"; ObjectID = "x3r-9O-qla"; */
+"x3r-9O-qla.text" = "1:1";
+
+/* Class = "UILabel"; text = "PlayerB"; ObjectID = "zIE-Sf-Qiz"; */
+"zIE-Sf-Qiz.text" = "PlayerB";

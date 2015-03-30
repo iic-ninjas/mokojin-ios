@@ -277,6 +277,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="There is no one in the queue. You should join!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGk-5e-pGb">
+                                <rect key="frame" x="16" y="407" width="568" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.53691846132278442" green="0.59577751159667969" blue="0.6271437406539917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-W4-Mdg">
                                 <rect key="frame" x="0.0" y="64" width="600" height="220"/>
                                 <subviews>
@@ -417,11 +423,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Fvd-W4-Mdg" secondAttribute="trailing" id="Kd8-6t-Pkf"/>
+                            <constraint firstItem="WGk-5e-pGb" firstAttribute="centerX" secondItem="imr-67-E8d" secondAttribute="centerX" id="LBA-UL-QKa"/>
                             <constraint firstItem="XlK-jJ-vIk" firstAttribute="top" secondItem="imr-67-E8d" secondAttribute="bottom" id="NIe-HQ-wDY"/>
                             <constraint firstAttribute="trailing" secondItem="imr-67-E8d" secondAttribute="trailing" id="VHJ-Z8-Wen"/>
                             <constraint firstItem="Fvd-W4-Mdg" firstAttribute="top" secondItem="rZd-fi-p8f" secondAttribute="bottom" id="c9I-JK-o5e"/>
+                            <constraint firstItem="WGk-5e-pGb" firstAttribute="centerY" secondItem="imr-67-E8d" secondAttribute="centerY" id="cFh-8j-brM"/>
                             <constraint firstItem="imr-67-E8d" firstAttribute="top" secondItem="Fvd-W4-Mdg" secondAttribute="bottom" id="fCz-sm-wAj"/>
+                            <constraint firstItem="WGk-5e-pGb" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leadingMargin" id="q8n-YG-uEa"/>
                             <constraint firstItem="imr-67-E8d" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="qlw-Ef-aBr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WGk-5e-pGb" secondAttribute="trailing" id="rvF-FE-m57"/>
                             <constraint firstItem="Fvd-W4-Mdg" firstAttribute="leading" secondItem="RVf-4c-ZTG" secondAttribute="leading" id="s1M-P3-v9t"/>
                         </constraints>
                     </view>
