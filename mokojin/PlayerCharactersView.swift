@@ -67,9 +67,9 @@ class PlayerCharactersView : UIXibView {
     }
     
     private func updatePlayer(){
-        if let p = player {
-            self.characterViewA.image = CharacterPresenter.image(p.characterA)
-            if let character = p.characterB {
+        if let player = self.player {
+            self.characterViewA.image = CharacterPresenter.image(player.characterA)
+            if let character = player.characterB {
                 self.characterViewB.hidden = false
                 self.characterViewB.image = CharacterPresenter.image(character)
                 stickToLeftConstraint.priority = _highPriority
