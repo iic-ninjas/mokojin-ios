@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-@IBDesignable
-class AvatarView: UIImageView {
+@IBDesignable class AvatarView: UIView {
     
     @IBInspectable
     var borderColor:UIColor = UIColor.clearColor()
@@ -18,14 +17,39 @@ class AvatarView: UIImageView {
     @IBInspectable
     var hasBorder:Bool = false
     
+    var imageView:UIImageView!
+    
+    @IBInspectable
+    var image:UIImage? {
+        set {
+            self.imageView.image = newValue
+        }
+        get {
+            return self.imageView.image
+        }
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        addSubviews()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubviews()
+    }
+    
+    private func addSubviews(){
+        self.imageView = UIImageView()
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        addSubview(self.imageView)
     }
     
     // We need to update the radius and borderWidth on layoutSubviews because the frame width might change due to AutoLayout
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layoutIfNeeded()
+        self.imageView.frame = self.bounds
         self.updateCornerRadius()
         self.updateBorder()
     }
@@ -67,5 +91,14 @@ class AvatarView: UIImageView {
         animation.springSpeed = 20;
         animation.toValue = targetBorderWidth
         self.layer.pop_addAnimation(animation, forKey: "borderWidth")
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        if nil == self.image {
+            self.image = UIImage(named: "player_4", inBundle: NSBundle(forClass: self.dynamicType),
+            compatibleWithTraitCollection: nil)
+        }
     }
 }

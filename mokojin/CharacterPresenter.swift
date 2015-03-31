@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-private let _emptyPlayerImage:UIImage! = UIImage(named: "player_empty")
+
+private let _emptyPlayerImage:UIImage! = UIImage(named:"player_empty",
+                                                inBundle:NSBundle(forClass: CharacterPresenter.self),
+                                                compatibleWithTraitCollection:nil)
 class CharacterPresenter {
     let character:Character
     
@@ -27,7 +30,9 @@ class CharacterPresenter {
     
     class func image(character: Character?) -> UIImage{
         if let char = character {
-            return UIImage(named: "player_\(char.characterId)") ?? _emptyPlayerImage
+            return UIImage(named: "player_\(char.characterId)",
+                inBundle:NSBundle(forClass: CharacterPresenter.self),
+                compatibleWithTraitCollection:nil) ?? _emptyPlayerImage
         } else {
             return _emptyPlayerImage
         }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6751"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerCharactersView" customModule="Tekken_Time" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerCharactersView" customModule="mokojin" customModuleProvider="target">
             <connections>
                 <outlet property="characterViewA" destination="Rqc-zs-6bT" id="euJ-k9-ERe"/>
                 <outlet property="characterViewB" destination="BrL-L3-7tN" id="Sb4-WX-TOE"/>
@@ -20,18 +20,18 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVU-jV-dBV">
                     <rect key="frame" x="0.0" y="0.0" width="142" height="81"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_25" translatesAutoresizingMaskIntoConstraints="NO" id="Rqc-zs-6bT" customClass="AvatarView" customModule="Tekken_Time" customModuleProvider="target">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rqc-zs-6bT" customClass="AvatarView" customModule="mokojin" customModuleProvider="target">
                             <rect key="frame" x="61" y="0.0" width="81" height="81"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Rqc-zs-6bT" secondAttribute="height" multiplier="1:1" id="vLv-4u-4WI"/>
                             </constraints>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player_26" translatesAutoresizingMaskIntoConstraints="NO" id="BrL-L3-7tN" customClass="AvatarView" customModule="Tekken_Time" customModuleProvider="target">
+                        </view>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BrL-L3-7tN" customClass="AvatarView" customModule="mokojin" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="BrL-L3-7tN" secondAttribute="height" multiplier="1:1" id="A7j-6h-VvP"/>
                             </constraints>
-                        </imageView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -59,8 +59,4 @@
             <point key="canvasLocation" x="236" y="177.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="player_25" width="106" height="106"/>
-        <image name="player_26" width="106" height="106"/>
-    </resources>
 </document>

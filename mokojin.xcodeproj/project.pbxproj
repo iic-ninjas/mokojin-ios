@@ -22,6 +22,7 @@
 		ED08F9631AC44D55006F2314 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED08F9641AC455D1006F2314 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
 		ED08F9661AC45992006F2314 /* QuickConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08F9651AC45992006F2314 /* QuickConfiguration.swift */; };
+		ED1C79431AC962E3008FC01A /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1C79421AC962E3008FC01A /* Test.storyboard */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
 		ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */; };
@@ -101,6 +102,7 @@
 		DE33C716671C23A203BFBCD4 /* Pods-mokojinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojinTests/Pods-mokojinTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED08F9651AC45992006F2314 /* QuickConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickConfiguration.swift; sourceTree = "<group>"; };
 		ED1C79411AC95871008FC01A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		ED1C79421AC962E3008FC01A /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		ED1CDA8E1ABF1BEE00F52413 /* mokojin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mokojin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1CDA921ABF1BEE00F52413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */,
 				ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */,
 				ED1CDA911ABF1BEE00F52413 /* Supporting Files */,
+				ED1C79421AC962E3008FC01A /* Test.storyboard */,
 			);
 			path = mokojin;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				ED1CDA9E1ABF1BEE00F52413 /* LaunchScreen.xib in Resources */,
 				CA413D921AC04DAE00BC5138 /* NamedCharacterView.xib in Resources */,
 				ED1CDA9B1ABF1BEE00F52413 /* Images.xcassets in Resources */,
+				ED1C79431AC962E3008FC01A /* Test.storyboard in Resources */,
 				1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

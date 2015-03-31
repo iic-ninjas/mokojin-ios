@@ -21,6 +21,12 @@ class Character : PFObject, PFSubclassing {
         return "Character"
     }
     
+    convenience init(name: String, characterId: Int){
+        self.init()
+        self.name = name
+        self.characterId = characterId
+    }
+    
     @NSManaged var name: String
     @NSManaged var characterId: Int
 }
