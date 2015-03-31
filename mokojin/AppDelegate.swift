@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(nil, block: nil)
         initModels()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UITableViewCell.appearance().backgroundColor = UIColor.clearColor()
         Fabric.with([Crashlytics()])
         return true
     }
