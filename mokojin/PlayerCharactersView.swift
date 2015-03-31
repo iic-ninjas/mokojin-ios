@@ -77,7 +77,7 @@ class PlayerCharactersView : UIXibView {
                 self.characterViewB.setHasBorder(direction.isMasking().left, animated: false)
             } else {
                 self.characterViewB.hidden = true
-                stickToLeftConstraint?.priority = _lowPriority
+                stickToLeftConstraint.priority = _lowPriority
             }
         }
     }
