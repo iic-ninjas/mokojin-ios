@@ -8,5 +8,5 @@ before_install:
   - gem install cocoapods -v '0.36.0'
 
 script:
-  # - xctool clean build test -workspace mokojin.xcworkspace -scheme mokojin
-  - set -o pipefail && xcodebuild -workspace mokojin.xcworkspace -scheme mokojin -configuration Debug test -sdk iphonesimulator | xcpretty -c --test
+  - xctool build test -workspace mokojin.xcworkspace -scheme mokojin
+  # - set -o pipefail && xcodebuild -workspace mokojin.xcworkspace -scheme mokojin -configuration Debug test -sdk iphonesimulator | xcpretty -c --test
