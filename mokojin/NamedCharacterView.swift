@@ -12,7 +12,7 @@ import UIKit
 @IBDesignable
 class NamedCharacterView: UIXibView {
     
-    var character:Character = Character() {
+    var character: TekkenCharacter = TekkenCharacter() {
         didSet {
             updateUI()
         }
@@ -54,7 +54,7 @@ class NamedCharacterView: UIXibView {
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        self.character = Character(name: "Alex", characterId: 0)
+        self.character = TekkenCharacter(name: "Alex", characterId: 0)
     }
 
 }

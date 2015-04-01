@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 
-class Character : PFObject, PFSubclassing {
+class TekkenCharacter: PFObject, PFSubclassing {
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
         dispatch_once(&onceToken) {

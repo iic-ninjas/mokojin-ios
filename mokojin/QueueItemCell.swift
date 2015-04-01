@@ -24,6 +24,7 @@ class QueueItemCell : UITableViewCell {
                 playerNameLabel.text = queueItem.player.person.name
                 queuedTimeLabel.text = QueuePresenter.timeago(queueItem.createdAt)
                 playerCharacterView.player = queueItem.player
+               
             }
         }
     }

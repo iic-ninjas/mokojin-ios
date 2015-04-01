@@ -95,8 +95,8 @@ class PlayerCharactersView : UIXibView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         let player = Player()
-        player.characterA = Character(name: "Alex", characterId: 0)
-        player.characterB = Character(name: "Moshe", characterId: 2)
+        player.characterA = TekkenCharacter(name: "Alex", characterId: 0)
+        player.characterB = TekkenCharacter(name: "Moshe", characterId: 2)
         self.player = player
     }
 

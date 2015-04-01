@@ -19,7 +19,7 @@ class CharacterStore {
     }
 
     let getter = GetCharacters()
-    var characters:[Character] = []
+    var characters:[TekkenCharacter] = []
     var loaded = false
     
     private init(){

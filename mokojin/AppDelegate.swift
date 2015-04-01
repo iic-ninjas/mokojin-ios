@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initModels(){
         Person.initialize()
         Player.initialize()
-        Character.initialize()
+        TekkenCharacter.initialize()
         QueueItem.initialize()
         Match.initialize()
     }

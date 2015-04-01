@@ -23,7 +23,7 @@ class Player : PFObject, PFSubclassing {
     }
     
     @NSManaged var person: Person
-    @NSManaged var characterA: Character?
-    @NSManaged var characterB: Character?
+    @NSManaged var characterA: TekkenCharacter?
+    @NSManaged var characterB: TekkenCharacter?
     
 }
