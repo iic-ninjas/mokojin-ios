@@ -10,9 +10,9 @@ import Foundation
 
 private let _highPriority:UILayoutPriority = 750
 private let _lowPriority:UILayoutPriority = 250
-class PlayerCharactersView : UIXibView {
 
-    @IBOutlet weak var stickToLeftConstraint: NSLayoutConstraint!
+@IBDesignable
+class PlayerCharactersView : UIXibView {
     
     enum Direction{
         case LeftToRight, RightToLeft
@@ -34,34 +34,20 @@ class PlayerCharactersView : UIXibView {
     
     var player:Player? {
         didSet{
-            if let p = player {
-                self.characterViewA.image = CharacterPresenter.image(p.characterA)
-                if let character = p.characterB {
-                    self.characterViewB.hidden = false
-                    self.characterViewB.image = CharacterPresenter.image(character)
-                    stickToLeftConstraint.priority = _highPriority
-                    self.characterViewA.setHasBorder(direction.isMasking().right, animated: false)
-                    self.characterViewB.setHasBorder(direction.isMasking().left, animated: false)
-                } else {
-                    self.characterViewB.hidden = true
-                    stickToLeftConstraint.priority = _lowPriority
-                }
-            }
-            
+            updatePlayer()
         }
     }
+    @IBOutlet weak var stickToLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var characterViewA: AvatarView!
     @IBOutlet weak var characterViewB: AvatarView!
 
     @IBInspectable
     var borderColor:UIColor = UIColor.clearColor() {
         didSet {
-            self.characterViewA.borderColor = self.borderColor
-            self.characterViewB.borderColor = self.borderColor
+            updateColors()
         }
     }
     
-    @IBInspectable
     var direction:Direction = Direction.LeftToRight {
         didSet {
             updateDirection()
@@ -72,13 +58,46 @@ class PlayerCharactersView : UIXibView {
         super.init(coder: aDecoder)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
     override func setup() {
         updateDirection()
     }
+    
+    private func updatePlayer(){
+        if let player = self.player {
+            self.characterViewA.image = CharacterPresenter.image(player.characterA)
+            if let character = player.characterB {
+                self.characterViewB.hidden = false
+                self.characterViewB.image = CharacterPresenter.image(character)
+                stickToLeftConstraint.priority = _highPriority
+                self.characterViewA.setHasBorder(direction.isMasking().right, animated: false)
+                self.characterViewB.setHasBorder(direction.isMasking().left, animated: false)
+            } else {
+                self.characterViewB.hidden = true
+                stickToLeftConstraint.priority = _lowPriority
+            }
+        }
+    }
+    
+    private func updateColors(){
+        self.characterViewA.borderColor = self.borderColor
+        self.characterViewB.borderColor = self.borderColor
+    }
 
-    func updateDirection(){
+    private func updateDirection(){
         self.characterViewA.layer.zPosition = direction.zPositions().right
         self.characterViewB.layer.zPosition = direction.zPositions().left
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        let player = Player()
+        player.characterA = TekkenCharacter(name: "Alex", characterId: 0)
+        player.characterB = TekkenCharacter(name: "Moshe", characterId: 2)
+        self.player = player
     }
 
 }

@@ -9,15 +9,16 @@
 import Foundation
 import UIKit
 
+@IBDesignable
 class NamedCharacterView: UIXibView {
-    var character:Character = Character() {
+    
+    var character: TekkenCharacter = TekkenCharacter() {
         didSet {
-            let presenter = CharacterPresenter(character: self.character)
-            self.nameView.text = presenter.displayName()
-            self.avatarView.image = presenter.image()
+            updateUI()
         }
     }
     
+    @IBInspectable
     var isSelected:Bool = false {
         didSet {
             self.avatarView.setHasBorder(self.isSelected, animated: true)
@@ -29,16 +30,11 @@ class NamedCharacterView: UIXibView {
                 self.nameView.textColor = Constants.Colors.darkTextColor
                 self.nameView.backgroundColor = UIColor.clearColor()
             }
-
         }
     }
     
     @IBOutlet weak var avatarView: AvatarView!
     @IBOutlet weak var nameView: UILabel!
-
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     func animateNameView(){
         let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
@@ -48,6 +44,17 @@ class NamedCharacterView: UIXibView {
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         animation.autoreverses = true
         self.nameView.pop_addAnimation(animation, forKey: "spring")
+    }
+    
+    private func updateUI(){
+        let presenter = CharacterPresenter(character: self.character)
+        self.nameView.text = presenter.displayName()
+        self.avatarView.image = presenter.image()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.character = TekkenCharacter(name: "Alex", characterId: 0)
     }
 
 }

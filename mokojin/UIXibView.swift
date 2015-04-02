@@ -10,8 +10,6 @@ import Foundation
 
 class UIXibView : UIView {
     
-    private var loadedXib: Bool = false
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadXib()
@@ -22,30 +20,25 @@ class UIXibView : UIView {
         loadXib()
     }
     
+    // Subclasses should override this method to provide any custom setup
     func setup(){
+        
     }
     
     private func loadXib() {
-        if !self.loadedXib {
-            let _customView = NSBundle.mainBundle().loadNibNamed(className(), owner: self, options: nil).first as UIView
-            if CGRectIsEmpty(frame){
-                self.bounds = _customView.bounds
-            } else {
-                _customView.frame = self.bounds
-                _customView.setTranslatesAutoresizingMaskIntoConstraints(false)
-            }
-
-            self.addSubview(_customView)
-            let views = ["customView": _customView]
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[customView]|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: views))
-            self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[customView]|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: views))
-            self.loadedXib = true
-        }
+        let _customView = loadNib()
+        _customView.frame = self.bounds
+        _customView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        self.addSubview(_customView)
         setup()
     }
     
     private func className() -> String {
         let fullClassName = NSStringFromClass(self.dynamicType) //Tekken_Time.NamedCharacterView
         return split(fullClassName) {$0 == "."}.last!
+    }
+    
+    private func loadNib() -> UIView {
+        return NSBundle(forClass: self.dynamicType).loadNibNamed(className(), owner: self, options: nil).first as UIView
     }
 }

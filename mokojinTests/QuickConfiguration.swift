@@ -15,7 +15,7 @@ class ParseTestConfiguration: QuickConfiguration {
         Parse.setApplicationId("GeJyJhvvsIe540zKyn9rCZwSv7AIEcc11DHQjSAV", clientKey: "40quo2Icf83unfXkDu2ZJjEcecPsHl03aqiuNsbH")
         Person.initialize()
         Player.initialize()
-        Character.initialize()
+        TekkenCharacter.initialize()
         QueueItem.initialize()
         Match.initialize()
     }

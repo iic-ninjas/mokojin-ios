@@ -11,13 +11,13 @@ import UIKit
 
 class SelectCharactersViewController: NotificationListenerViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    typealias CharacterSelection = (character: Character, indexPath: NSIndexPath)
+    typealias CharacterSelection = (character: TekkenCharacter, indexPath: NSIndexPath)
     
     @IBOutlet weak var doneButton: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var player:Player?
-    var characters:[Character] = []
+    var characters:[TekkenCharacter] = []
     var firstSelection:CharacterSelection?
     var secondSelection:CharacterSelection?
     
@@ -101,7 +101,7 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
         }
     }
     
-    private func character(#indexPath: NSIndexPath) -> Character?{
+    private func character(#indexPath: NSIndexPath) -> TekkenCharacter?{
         return self.characters[indexPath.row]
     }
     
@@ -116,7 +116,7 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
     
     // MARK: Selection Logic
     
-    private func isCharacterSelected(character: Character) -> Bool {
+    private func isCharacterSelected(character: TekkenCharacter) -> Bool {
         return (self.firstSelection?.character == character ||
                 self.secondSelection?.character == character)
     }
@@ -167,7 +167,7 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
         }
     }
     
-    private func findExistingCharacter(existingCharacter: Character?) {
+    private func findExistingCharacter(existingCharacter: TekkenCharacter?) {
         if let character = existingCharacter {
             if let index = find(self.characters, character) {
                 let indexPath = NSIndexPath(forItem: index, inSection: 0)
