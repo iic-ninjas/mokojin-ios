@@ -15,7 +15,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     var people:People = []
     var searchResults:People = []
     var searchQuery:String = ""
-    let notificationManager = NotificationManager()
+    let notificationManager = ObservationManager()
     
     @IBOutlet weak var emptyView: UILabel!
     

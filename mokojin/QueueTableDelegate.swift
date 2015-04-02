@@ -11,7 +11,7 @@ import Foundation
 class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     let tableView:UITableView
-    let notificationManager = NotificationManager()
+    let notificationManager = ObservationManager()
     var queue:Queue = []
     var dontRefresh = false
     

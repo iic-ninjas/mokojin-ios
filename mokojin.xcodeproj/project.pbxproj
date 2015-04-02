@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4180AB7DD6DD1F157A5FE7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41824A9E0B0887A6347445 /* NotificationManager.swift */; };
 		1D4186A8CCDAA136F8845833 /* Obj-C-Bridge.h in Resources */ = {isa = PBXBuildFile; fileRef = 1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */; };
+		1D418FF7AA81E5826CA989A2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41824A9E0B0887A6347445 /* NotificationManager.swift */; };
 		84F7F280299DE8798315E3FB /* Pods_mokojinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA0E49A559FB7CFD89F6DD9 /* Pods_mokojinTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CA413D871AC01AD800BC5138 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D861AC01AD800BC5138 /* AvatarView.swift */; };
 		CA413D891AC036A600BC5138 /* NamedCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA413D881AC036A600BC5138 /* NamedCharacterView.swift */; };
@@ -20,7 +22,7 @@
 		E3F7026A4F7CFD44577AB57C /* libPods-mokojin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */; };
 		ED08F9621AC44CCF006F2314 /* PeopleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A2D41ABF311B00B2AC91 /* PeopleStore.swift */; };
 		ED08F9631AC44D55006F2314 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
-		ED08F9641AC455D1006F2314 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
+		ED08F9641AC455D1006F2314 /* ObservationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* ObservationManager.swift */; };
 		ED08F9661AC45992006F2314 /* QuickConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED08F9651AC45992006F2314 /* QuickConfiguration.swift */; };
 		ED1CDA941ABF1BEE00F52413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */; };
 		ED1CDA991ABF1BEE00F52413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1CDA971ABF1BEE00F52413 /* Main.storyboard */; };
@@ -39,7 +41,7 @@
 		ED4790D91AC0A087008B9E4C /* CurrentMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */; };
 		ED605C8F1ABFFF4700243FC1 /* GetPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */; };
 		ED605C921AC0056400243FC1 /* JoinQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */; };
-		ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* NotificationManager.swift */; };
+		ED605C951AC00A7500243FC1 /* ObservationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C941AC00A7500243FC1 /* ObservationManager.swift */; };
 		ED605C971AC00C1300243FC1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C961AC00C1300243FC1 /* Player.swift */; };
 		ED605C991AC00E5D00243FC1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C981AC00E5D00243FC1 /* Character.swift */; };
 		ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED605C9A1AC00ED200243FC1 /* QueueItem.swift */; };
@@ -84,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D41824A9E0B0887A6347445 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		1D4186520BFBBEAB95903C76 /* Obj-C-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Obj-C-Bridge.h"; sourceTree = "<group>"; };
 		2E68C2185B7222E00E73BA2E /* libPods-mokojin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mokojin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		609B91B80C28049DC558B30B /* Pods-mokojin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mokojin.release.xcconfig"; path = "Pods/Target Support Files/Pods-mokojin/Pods-mokojin.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +125,7 @@
 		ED4790D81AC0A087008B9E4C /* CurrentMatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMatchViewController.swift; sourceTree = "<group>"; };
 		ED605C8E1ABFFF4700243FC1 /* GetPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeople.swift; sourceTree = "<group>"; };
 		ED605C911AC0056400243FC1 /* JoinQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinQueueViewController.swift; sourceTree = "<group>"; };
-		ED605C941AC00A7500243FC1 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		ED605C941AC00A7500243FC1 /* ObservationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationManager.swift; sourceTree = "<group>"; };
 		ED605C961AC00C1300243FC1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		ED605C981AC00E5D00243FC1 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		ED605C9A1AC00ED200243FC1 /* QueueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueItem.swift; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 		CA413D851AC01ABC00BC5138 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */,
+				ED1CDA971ABF1BEE00F52413 /* Main.storyboard */,
 				CA413D901AC04D8C00BC5138 /* NamedCharacterView */,
 				CA413D861AC01AD800BC5138 /* AvatarView.swift */,
 				ED37734C1AC1BCE300216F2B /* PlayerCharactersView */,
@@ -246,6 +251,7 @@
 		ED1CDA901ABF1BEE00F52413 /* mokojin */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2F9EC1ACD300900357669 /* app-lifecycle */,
 				CA4832771AC1913900862CC3 /* presenters */,
 				CA413D851AC01ABC00BC5138 /* views */,
 				ED605C901AC0054C00243FC1 /* controllers */,
@@ -253,10 +259,7 @@
 				EDD2A2D31ABF310D00B2AC91 /* datastores */,
 				EDD2A2D01ABF304E00B2AC91 /* models */,
 				ED605C931AC00A6B00243FC1 /* utils */,
-				ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */,
-				ED1CDA971ABF1BEE00F52413 /* Main.storyboard */,
 				ED1CDA9A1ABF1BEE00F52413 /* Images.xcassets */,
-				ED1CDA9C1ABF1BEE00F52413 /* LaunchScreen.xib */,
 				ED1CDA911ABF1BEE00F52413 /* Supporting Files */,
 			);
 			path = mokojin;
@@ -334,7 +337,7 @@
 		ED605C931AC00A6B00243FC1 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				ED605C941AC00A7500243FC1 /* NotificationManager.swift */,
+				ED605C941AC00A7500243FC1 /* ObservationManager.swift */,
 				CA4832751AC180AE00862CC3 /* Constants.swift */,
 				ED338B841AC056720095FF7E /* ProgressHUD.swift */,
 				ED37734D1AC1BDC600216F2B /* UIXibView.swift */,
@@ -385,6 +388,15 @@
 				ED605CA41AC0137E00243FC1 /* SessionDataStore.swift */,
 			);
 			name = datastores;
+			sourceTree = "<group>";
+		};
+		EDD2F9EC1ACD300900357669 /* app-lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				ED1CDA931ABF1BEE00F52413 /* AppDelegate.swift */,
+				1D41824A9E0B0887A6347445 /* NotificationManager.swift */,
+			);
+			name = "app-lifecycle";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,7 +605,7 @@
 				ED3773471AC19A2500216F2B /* QueueItemCell.swift in Sources */,
 				ED605CAE1AC0178400243FC1 /* InvitePlayersOperation.swift in Sources */,
 				ED3773451AC1867000216F2B /* QueueTableDelegate.swift in Sources */,
-				ED605C951AC00A7500243FC1 /* NotificationManager.swift in Sources */,
+				ED605C951AC00A7500243FC1 /* ObservationManager.swift in Sources */,
 				ED83475B1AC2AF1B001CCE09 /* RatioPresenter.swift in Sources */,
 				ED605CA11AC0114E00243FC1 /* CharacterStore.swift in Sources */,
 				ED61B0F51AC30B93008A3E5F /* PFObject+Equality.swift in Sources */,
@@ -626,6 +638,7 @@
 				ED605C9B1AC00ED200243FC1 /* QueueItem.swift in Sources */,
 				ED605C991AC00E5D00243FC1 /* Character.swift in Sources */,
 				CA4832761AC180AE00862CC3 /* Constants.swift in Sources */,
+				1D418FF7AA81E5826CA989A2 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,9 +659,10 @@
 				ED61B0F61AC30E59008A3E5F /* PFObject+Equality.swift in Sources */,
 				EDA704B31AC2E01E00DE4AED /* QueueItem.swift in Sources */,
 				ED61B0F31AC309A5008A3E5F /* PersonTest.swift in Sources */,
-				ED08F9641AC455D1006F2314 /* NotificationManager.swift in Sources */,
+				ED08F9641AC455D1006F2314 /* ObservationManager.swift in Sources */,
 				EDA704B21AC2E01E00DE4AED /* Character.swift in Sources */,
 				ED08F9621AC44CCF006F2314 /* PeopleStore.swift in Sources */,
+				1D4180AB7DD6DD1F157A5FE7 /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

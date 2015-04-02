@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class NotificationListenerViewController: UIViewController {
-    let notificationManager = NotificationManager()
+    let notificationManager = ObservationManager()
     
     override init() {
         super.init()
