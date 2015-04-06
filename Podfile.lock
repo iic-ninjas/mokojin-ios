@@ -5,7 +5,7 @@ PODS:
   - Parse (1.6.5):
     - Bolts (~> 1.1)
   - pop (1.0.7)
-  - Quick (0.2.2)
+  - Quick (0.2.3)
   - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
@@ -22,7 +22,7 @@ SPEC CHECKSUMS:
   NSTimer-Blocks: 88faf9aef5f250ead087f3f67ae642517083bf36
   Parse: a21db4037d70a68a4ec64ecc0f327ed475cc14f8
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
-  Quick: 1bda8b4c8d43f6b4dd69ca001918b1767b3c9c93
+  Quick: 2c59914d3b2548a0e8ed0288062d965d9bab03e2
   SVProgressHUD: 3afb875b9eb23acd1bed9b82495695c68621a8b2
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.3
