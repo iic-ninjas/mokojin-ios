@@ -30,7 +30,7 @@ class CurrentMatchViewController : NotificationListenerViewController {
         self.queueTableDelegate = QueueTableDelegate(tableView: self.tableView)
 
         self.refreshControl = UIRefreshControl()
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         self.tableView.addSubview(refreshControl)
     }
 
