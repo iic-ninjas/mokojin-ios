@@ -21,12 +21,22 @@ class CurrentMatchViewController : NotificationListenerViewController {
 
     var queueTableDelegate:QueueTableDelegate?
     
+    var refreshControl:UIRefreshControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let image = UIImage(named: "AppLogo")
         self.navigationItem.titleView = UIImageView(image: image)
         self.queueTableDelegate = QueueTableDelegate(tableView: self.tableView)
 
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+
+    func refresh(sender: AnyObject) {
+        forceUpdate()
+        self.refreshControl.endRefreshing()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
