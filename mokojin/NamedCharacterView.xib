@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NamedCharacterView" customModule="mokojin" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarView" destination="J4c-r1-NGF" id="5VN-vJ-UZN"/>
+                <outlet property="nameView" destination="bPX-QV-plO" id="pwt-xh-GBT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Xib Container View">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPX-QV-plO">
+                    <rect key="frame" x="25" y="101" width="94" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="3AF-N7-Azy"/>
+                        <constraint firstAttribute="height" constant="24" id="JvA-8Z-glc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-r1-NGF" customClass="AvatarView" customModule="mokojin" customModuleProvider="target">
+                    <rect key="frame" x="25" y="0.0" width="94" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="MyX-f3-Xi5"/>
+                        <constraint firstAttribute="width" constant="94" id="T1Y-c9-MzQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.91683745380000004" green="0.25824812050000001" blue="0.17720967530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hasBorder" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="bPX-QV-plO" firstAttribute="centerX" secondItem="J4c-r1-NGF" secondAttribute="centerX" id="7X3-u8-GuX"/>
+                <constraint firstAttribute="centerX" secondItem="J4c-r1-NGF" secondAttribute="centerX" id="FCW-8r-rmq"/>
+                <constraint firstItem="J4c-r1-NGF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GuP-4b-uFi"/>
+                <constraint firstItem="bPX-QV-plO" firstAttribute="top" secondItem="J4c-r1-NGF" secondAttribute="bottom" constant="7" id="fIn-dU-SrL"/>
+                <constraint firstItem="J4c-r1-NGF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jZk-RX-kwE"/>
+                <constraint firstAttribute="trailing" secondItem="J4c-r1-NGF" secondAttribute="trailing" id="xBw-zM-27T"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="GuP-4b-uFi"/>
+                    <exclude reference="xBw-zM-27T"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="72" y="133"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,13 @@
+osx_image: xcode611
+language: objective-c
+cache:
+  - bundler
+  - cocoapods
+
+before_install:
+  - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+  - gem install cocoapods -v '0.36.0'
+
+script:
+  # - xctool build test -workspace mokojin.xcworkspace -scheme mokojin
+  - set -o pipefail && xcodebuild -workspace mokojin.xcworkspace -scheme mokojin -configuration Debug test -sdk iphonesimulator | xcpretty -c --test
