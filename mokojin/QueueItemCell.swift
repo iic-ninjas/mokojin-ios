@@ -22,7 +22,7 @@ class QueueItemCell : UITableViewCell {
         didSet {
             if let queueItem = self.queueItem {
                 playerNameLabel.text = queueItem.player.person.name
-                queuedTimeLabel.text = QueuePresenter.timeago(queueItem.createdAt)
+                queuedTimeLabel.text = QueuePresenter.timeago(queueItem.createdAt!)
                 playerCharacterView.player = queueItem.player
                
             }

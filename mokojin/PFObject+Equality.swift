@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import Parse
 
 extension PFObject: Hashable, Equatable {
     
     public override var hashValue: Int {
-        return self.objectId.hashValue
+        return self.objectId!.hashValue
     }
     
 }

@@ -12,7 +12,7 @@ import UIKit
 @IBDesignable
 class NamedCharacterView: UIXibView {
     
-    var character: TekkenCharacter = TekkenCharacter() {
+    var character: TekkenCharacter! {
         didSet {
             updateUI()
         }

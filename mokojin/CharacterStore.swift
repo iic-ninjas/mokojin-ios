@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 private let _CharacterStoreInstance = CharacterStore()
 

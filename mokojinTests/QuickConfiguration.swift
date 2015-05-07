@@ -8,7 +8,6 @@
 
 import Foundation
 import Quick
-import Parse
 
 class ParseTestConfiguration: QuickConfiguration {
     override class func configure(configuration : Configuration) {

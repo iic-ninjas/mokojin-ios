@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 private let _SessionDataStoreInstance = SessionDataStore()
 

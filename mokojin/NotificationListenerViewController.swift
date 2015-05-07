@@ -12,11 +12,6 @@ import UIKit
 class NotificationListenerViewController: UIViewController {
     let notificationManager = NotificationManager()
     
-    override init() {
-        super.init()
-        self.listenOnEvents()
-    }
-    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         self.listenOnEvents()

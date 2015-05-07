@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class GoodNightOperation{
     func run(callback: PFIdResultBlock){

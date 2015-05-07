@@ -39,6 +39,6 @@ class UIXibView : UIView {
     }
     
     private func loadNib() -> UIView {
-        return NSBundle(forClass: self.dynamicType).loadNibNamed(className(), owner: self, options: nil).first as UIView
+        return NSBundle(forClass: self.dynamicType).loadNibNamed(className(), owner: self, options: nil).first as! UIView
     }
 }

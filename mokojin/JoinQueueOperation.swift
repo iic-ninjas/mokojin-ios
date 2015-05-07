@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class JoinQueueOperation{
     func run(person:Person, callback: PFIdResultBlock){
@@ -15,6 +14,6 @@ class JoinQueueOperation{
     }
     
     func buildParams(person:Person) -> [NSObject: AnyObject]{
-        return ["person": person.objectId]
+        return ["person": person.objectId!]
     }
 }

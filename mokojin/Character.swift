@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class TekkenCharacter: PFObject, PFSubclassing {
     override class func initialize() {

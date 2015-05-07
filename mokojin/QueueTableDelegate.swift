@@ -57,7 +57,7 @@ class QueueTableDelegate: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("QueueItemCellID", forIndexPath: indexPath) as QueueItemCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("QueueItemCellID", forIndexPath: indexPath) as! QueueItemCell
         cell.queueItem  = queueItem(atIndexPath: indexPath)
         return cell
     }

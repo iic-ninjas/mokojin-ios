@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Parse
-
 
 class Player : PFObject, PFSubclassing {
     override class func initialize() {

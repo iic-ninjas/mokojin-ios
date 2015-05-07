@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 enum WinnerEnum: String{
     case PlayerA = "playerA",
@@ -21,7 +20,7 @@ class EndMatchOperation{
     
     func buildParams(match: Match, _ winner: WinnerEnum) -> [NSObject: AnyObject]{
         return [
-            "match": match.objectId,
+            "match": match.objectId!,
             "winner": winner.rawValue
         ]
     }

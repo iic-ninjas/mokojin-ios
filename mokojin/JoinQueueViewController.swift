@@ -19,11 +19,6 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var emptyView: UILabel!
     
-    override init() {
-        super.init()
-        self.listenOnEvents()
-    }
-    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         self.listenOnEvents()
@@ -92,7 +87,7 @@ class JoinQueueViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID") as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("PlayerCellID") as! UITableViewCell
         switch indexPath.section {
         case 0: cell.textLabel?.text = "Add new player '\(self.searchQuery)'"
         case 1: cell.textLabel?.text = personAtIndex(tableView, indexPath: indexPath).name

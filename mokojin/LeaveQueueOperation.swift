@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class LeaveQueueOperation{
     func run(queueItem: QueueItem, callback: PFIdResultBlock){
@@ -16,7 +15,7 @@ class LeaveQueueOperation{
     
     func buildParams(queueItem: QueueItem) -> [NSObject: AnyObject]{
         return [
-            "queueItem": queueItem.objectId
+            "queueItem": queueItem.objectId!
         ]
     }
 }

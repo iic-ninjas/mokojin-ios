@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 typealias SessionData = (match: Match?, queue: Queue)
 class GetSessionData {

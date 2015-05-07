@@ -79,7 +79,7 @@ class SelectCharactersViewController: NotificationListenerViewController, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CharacterCellID", forIndexPath: indexPath) as CharacterCellView
+        let cell = self.collectionView.dequeueReusableCellWithReuseIdentifier("CharacterCellID", forIndexPath: indexPath) as! CharacterCellView
         if let character = character(indexPath: indexPath){
             cell.characterView.character = character
             cell.performSelectionAnimations()

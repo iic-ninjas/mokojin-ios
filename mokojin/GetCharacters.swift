@@ -7,12 +7,11 @@
 //
 
 import Foundation
-import Parse
 
 class GetCharacters {
     func get(callback: ([TekkenCharacter])->()){
         PFCloud.callFunctionInBackground("getCharacters", withParameters: nil) { (rawResponse, err) -> Void in
-            let characters = rawResponse as [TekkenCharacter]
+            let characters = rawResponse as! [TekkenCharacter]
             callback(characters)
         }
     }

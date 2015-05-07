@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class SetCharactersOperation{
     func run(player:Player, characterA: TekkenCharacter, characterB: TekkenCharacter?, callback: PFIdResultBlock){
@@ -17,11 +16,11 @@ class SetCharactersOperation{
     func buildParams(player:Player, _ characterA: TekkenCharacter, _ characterB: TekkenCharacter?) -> [NSObject: AnyObject]{
         var characterBId:String = ""
         if let cb = characterB {
-            characterBId = cb.objectId
+            characterBId = cb.objectId!
         }
         return [
-            "player": player.objectId,
-            "characterA": characterA.objectId,
+            "player": player.objectId!,
+            "characterA": characterA.objectId!,
             "characterB": characterBId,
         ]
     }

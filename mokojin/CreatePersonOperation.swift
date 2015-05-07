@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class CreatePersonOperation{
     func run(name: String, callback: PFIdResultBlock){

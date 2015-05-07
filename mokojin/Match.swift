@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Parse
 
 class Match : PFObject, PFSubclassing {
     override class func initialize() {
